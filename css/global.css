@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+
+  color: #181818;
+
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 16px;
+  line-height: 21.79px;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 66px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 46.2px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 1322px;
+  width: 100%;
+
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.default-button {
+  background-color: #181818;
+
+  width: 100%;
+  height: 56px;
+  border-radius: 6px;
+  color: #f2f2f2;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.79px;
+
+  cursor: pointer;
+}
+
+.subtitle {
+  max-width: 305px;
+  width: 100%;
+}
+
+.mb-160 {
+  margin-bottom: 160px;
+}
+
+.custom-input {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+  width: 100%;
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 19.07px;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.custom-input::placeholder {
+  color: #b7b7b7;
+
+  font-size: 14px;
+  line-height: 19.07px;
+}
+
+.custom-input[type="number"]::-webkit-outer-spin-button,
+.custom-input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-input[type="number"] {
+  -moz-appearance: textfield;
+}
