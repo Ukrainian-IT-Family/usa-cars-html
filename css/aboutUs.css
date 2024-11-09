@@ -1,0 +1,54 @@
+.about-us__inner {
+  display: flex;
+  gap: 66px;
+}
+
+.about-us__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  width: 100%;
+}
+
+.about-us__decorative-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.about-us__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  max-width: 438px;
+  width: 100%;
+
+  margin-top: 60px;
+}
+
+.about-us__stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about-us__stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.about-us__stat-number {
+  font-size: 32px;
+  line-height: 43.58px;
+  text-align: center;
+}
+
+.about-us__stat-label {
+  font-size: 12px;
+  line-height: 16.34px;
+  text-align: center;
+}

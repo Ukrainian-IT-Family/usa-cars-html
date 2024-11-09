@@ -1,414 +1,985 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/media.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <title>AUTOMARKET</title>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="header__inner">
-          <a href="/index.html">
-            <img src="assets/svg/logo.svg" alt="logo" class="header__logo" />
-          </a>
-          <div class="header__nav">
-            <div class="header__dropdown header__dropdown--services">
-              <button class="header__dropdown-btn">
-                <span> Наші послуги </span>
-                <svg
-                  width="13"
-                  height="7"
-                  viewBox="0 0 13 7"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.7702 -5.05751e-07L12.8 1.04108L7.18775 6.71157C7.09783 6.80297 6.99089 6.87551 6.8731 6.92502C6.75531 6.97452 6.62899 7 6.50141 7C6.37383 7 6.24751 6.97452 6.12972 6.92502C6.01193 6.87551 5.90499 6.80297 5.81506 6.71157L0.199951 1.04108L1.22971 0.000980809L6.49995 5.32314L11.7702 -5.05751e-07Z"
-                  />
-                </svg>
-              </button>
-              <ul class="header__dropdown-menu">
-                <li class="header__dropdown-item">
-                  <a href="#tradein" class="header__dropdown-link"
-                    >Послуга Trade-in</a
-                  >
-                </li>
-                <li class="header__dropdown-item">
-                  <a href="#automaidanchik" class="header__dropdown-link"
-                    >Автомайданчик</a
-                  >
-                </li>
-                <li class="header__dropdown-item">
-                  <a href="#service" class="header__dropdown-link"
-                    >Сервіс для авто</a
-                  >
-                </li>
-                <li class="header__dropdown-item">
-                  <a href="#credit" class="header__dropdown-link"
-                    >Кредитування</a
-                  >
-                </li>
-                <li class="header__dropdown-item">
-                  <a href="#evacuator" class="header__dropdown-link"
-                    >Евакуатор</a
-                  >
-                </li>
-              </ul>
-            </div>
 
-            <div class="header__dropdown">
-              <button class="header__dropdown-btn">
-                <span>Доставка авто</span>
-                <svg
-                  width="13"
-                  height="7"
-                  viewBox="0 0 13 7"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.7702 -5.05751e-07L12.8 1.04108L7.18775 6.71157C7.09783 6.80297 6.99089 6.87551 6.8731 6.92502C6.75531 6.97452 6.62899 7 6.50141 7C6.37383 7 6.24751 6.97452 6.12972 6.92502C6.01193 6.87551 5.90499 6.80297 5.81506 6.71157L0.199951 1.04108L1.22971 0.000980809L6.49995 5.32314L11.7702 -5.05751e-07Z"
-                  />
-                </svg>
-              </button>
-              <ul class="header__dropdown-menu">
-                <li class="header__dropdown-item">
-                  <a href="#usa" class="header__dropdown-link">США</a>
-                </li>
-                <li class="header__dropdown-item">
-                  <a href="#korea" class="header__dropdown-link">Корея</a>
-                </li>
-                <li class="header__dropdown-item">
-                  <a href="#europe" class="header__dropdown-link">Європа</a>
-                </li>
-                <li class="header__dropdown-item">
-                  <a href="#china" class="header__dropdown-link">Китай</a>
-                </li>
-              </ul>
-            </div>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/aboutUs.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/companyOverview.css" />
+  <link rel="stylesheet" href="css/deliveryServices.css" />
+  <link rel="stylesheet" href="css/processSteps.css" />
+  <link rel="stylesheet" href="css/catalog.css" />
+  <link rel="stylesheet" href="css/promotion-week.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/comments.css" />
+  <link rel="stylesheet" href="css/carCard.css" />
+  <link rel="stylesheet" href="css/footer.css" />
 
-            <a href="#catalog" class="catalog__link">Каталог авто</a>
+  <title>AUTOMARKET</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header__inner">
+        <a href="/index.html">
+          <img src="assets/svg/logo.svg" alt="logo" class="header__logo" />
+        </a>
+        <div class="header__nav">
+          <div class="header__dropdown header__dropdown--services">
+            <button class="header__dropdown-btn">
+              <span> Наші послуги </span>
+              <svg width="13" height="7" viewBox="0 0 13 7" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.7702 -5.05751e-07L12.8 1.04108L7.18775 6.71157C7.09783 6.80297 6.99089 6.87551 6.8731 6.92502C6.75531 6.97452 6.62899 7 6.50141 7C6.37383 7 6.24751 6.97452 6.12972 6.92502C6.01193 6.87551 5.90499 6.80297 5.81506 6.71157L0.199951 1.04108L1.22971 0.000980809L6.49995 5.32314L11.7702 -5.05751e-07Z" />
+              </svg>
+            </button>
+            <ul class="header__dropdown-menu">
+              <li class="header__dropdown-item">
+                <a href="#tradein" class="header__dropdown-link">Послуга Trade-in</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#automaidanchik" class="header__dropdown-link">Автомайданчик</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#service" class="header__dropdown-link">Сервіс для авто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#credit" class="header__dropdown-link">Кредитування</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#evacuator" class="header__dropdown-link">Евакуатор</a>
+              </li>
+            </ul>
           </div>
-          <button class="header__btn">Залишити заявку</button>
+
+          <div class="header__dropdown">
+            <button class="header__dropdown-btn">
+              <span>Доставка авто</span>
+              <svg width="13" height="7" viewBox="0 0 13 7" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.7702 -5.05751e-07L12.8 1.04108L7.18775 6.71157C7.09783 6.80297 6.99089 6.87551 6.8731 6.92502C6.75531 6.97452 6.62899 7 6.50141 7C6.37383 7 6.24751 6.97452 6.12972 6.92502C6.01193 6.87551 5.90499 6.80297 5.81506 6.71157L0.199951 1.04108L1.22971 0.000980809L6.49995 5.32314L11.7702 -5.05751e-07Z" />
+              </svg>
+            </button>
+            <ul class="header__dropdown-menu">
+              <li class="header__dropdown-item">
+                <a href="#usa" class="header__dropdown-link">США</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#korea" class="header__dropdown-link">Корея</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#europe" class="header__dropdown-link">Європа</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#china" class="header__dropdown-link">Китай</a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#catalog" class="catalog__link">Каталог авто</a>
+        </div>
+        <button class="header__btn">Залишити заявку</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="company-overview__section">
+      <div class="container">
+        <div class="company-overview__inner mb-160">
+          <div class="company-overview__content">
+            <h1 class="company-overview__title">
+              ДОСТАВКА АВТО З ЄВРОПИ, США, КОРЕЇ, КИТАЮ, КАНАДИ
+            </h1>
+            <div class="company-overview__contact-block">
+              <p>
+                Ми - ваш надійний партнер у сфері доставки вашої мрії без
+                зайвих зусиль
+              </p>
+              <button class="default-button">ЗАТЕЛЕФОНУВАТИ</button>
+            </div>
+          </div>
+          <img class="company-overview__image" src="./assets/images/car-banner.png" alt="company-overview image" />
         </div>
       </div>
-    </header>
-    <main class="main">
-      <section class="company-overview__section">
-        <div class="container">
-          <div class="company-overview__inner mb-160">
-            <div class="company-overview__content">
-              <h1 class="company-overview__title">
-                ДОСТАВКА АВТО З ЄВРОПИ, США, КОРЕЇ, КИТАЮ, КАНАДИ
-              </h1>
-              <div class="company-overview__contact-block">
+    </section>
+
+    <section class="about-us__section">
+      <div class="container">
+        <div class="about-us__inner">
+          <img class="about-us__image" src="./assets/images/about-us.png" alt="about us image" />
+          <div class="about-us__content">
+            <img class="about-us__decorative-icon" src="./assets//svg/about__decorative-icon.svg"
+              alt="decorative icon" />
+            <div>
+              <h2>Про нас</h2>
+              <div class="about-us__text">
                 <p>
-                  Ми - ваш надійний партнер у сфері доставки вашої мрії без
-                  зайвих зусиль
+                  Автомаркет – це компанія, яка займається доставкою
+                  автомобілів з Америки, Європи, Китаю та Кореї. Також
+                  пропонуємо послугу Trade-in, допомагаємо з продажем та
+                  обміном вашого авто. 
                 </p>
-                <button class="default-button">ЗАТЕЛЕФОНУВАТИ</button>
+                <p>
+                  У Івано-Франківську ми надаємо послуги хімчистки, автомийки,
+                  полірування та фарбування авто. У нас ви також можете
+                  замовити послуги евакуатора
+                </p>
               </div>
             </div>
-            <img
-              class="company-overview__image"
-              src="./assets/images/car-banner.png"
-              alt="company-overview image"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="about-us__section">
-        <div class="container">
-          <div class="about-us__inner mb-160">
-            <img
-              class="about-us__image"
-              src="./assets/images/about-us.png"
-              alt="about us image"
-            />
-            <div class="about-us__content">
-              <img
-                class="about-us__decorative-icon"
-                src="./assets//svg/about__decorative-icon.svg"
-                alt="decorative icon"
-              />
-              <div>
-                <h2>Про нас</h2>
-                <div class="about-us__text">
-                  <p>
-                    Автомаркет – це компанія, яка займається доставкою
-                    автомобілів з Америки, Європи, Китаю та Кореї. Також
-                    пропонуємо послугу Trade-in, допомагаємо з продажем та
-                    обміном вашого авто. 
-                  </p>
-                  <p>
-                    У Івано-Франківську ми надаємо послуги хімчистки, автомийки,
-                    полірування та фарбування авто. У нас ви також можете
-                    замовити послуги евакуатора
-                  </p>
-                </div>
+            <div class="about-us__stats">
+              <div class="about-us__stat-item">
+                <span class="about-us__stat-number">10+</span>
+                <span class="about-us__stat-label">років <br /> на ринку</span>
               </div>
-              <div class="about-us__stats">
-                <div class="about-us__stat-item">
-                  <span class="about-us__stat-number">10+</span>
-                  <span class="about-us__stat-label">років <br/> на ринку</span>
-                </div>
-                <div class="about-us__stat-item">
-                  <span class="about-us__stat-number">2500+</span>
-                  <span class="about-us__stat-label">задоволених  <br/> клієнтів</span>
-                </div>
-                <div class="about-us__stat-item">
-                  <span class="about-us__stat-number">3000+</span>
-                  <span class="about-us__stat-label">замовлених  <br/> авто</span>
-                </div>
-                <div class="about-us__stat-item">
-                  <span class="about-us__stat-number">50+</span>
-                  <span class="about-us__stat-label">авто  <br/> в дорозі</span>
-                </div>
+              <div class="about-us__stat-item">
+                <span class="about-us__stat-number">2500+</span>
+                <span class="about-us__stat-label">задоволених <br /> клієнтів</span>
+              </div>
+              <div class="about-us__stat-item">
+                <span class="about-us__stat-number">3000+</span>
+                <span class="about-us__stat-label">замовлених <br /> авто</span>
+              </div>
+              <div class="about-us__stat-item">
+                <span class="about-us__stat-number">50+</span>
+                <span class="about-us__stat-label">авто <br /> в дорозі</span>
+              </div>
               </в>
             </div>
           </div>
         </div>
-      </section>
-      <section class="delivery-services mb-160">
-        <div class="container">
-          <div class="delivery-services__inner">
-            <div class="delivery-services__header">
-              <h2>Авто під замовлення</h2>
-              <p class="subtitle">Пропонуємо доставку автомобілів за доступною ціною з усіх куточків світу</p>
-            </div>
-        
-            <div class="delivery-services__list">
-              <div class="delivery-services__item">
-                <span class="delivery-services__index">01</span>
-                <div class="delivery-services__content">
-                  <div>
-                    <h3 class="delivery-services__country">США</h3>
-                    <p class="delivery-services__description">Наша компанія пропонує повний спектр послуг з доставки автомобілів з США, пропонуючи індивідуальний підхід 
-                      до кожного клієнта і розробляючи оптимальний маршрут доставки.</p>
-                  </div>
-             
-                  <a href="#" class="delivery-services__link">Дізнатись деталі <img src="./assets/svg/right-arrow.svg" alt="right arrow"/> </a>
-                </div>
-                <img src="./assets/images/delivery-services_1.jpg" alt="США" class="delivery-services__image" />
-              </div> 
-              <div class="delivery-services__item">
-                <span class="delivery-services__index">02</span>
-                <div class="delivery-services__content">
-                  <div>
-                    <h3 class="delivery-services__country">Корея</h3>
-                    <p class="delivery-services__description">Дилерська компанія AutoMarket надає повний спектр послуг для вашої зручності та безпеки під час процесу купівлі автомобілів з Кореї . </p>
-                  </div>
-             
-                  <a href="#" class="delivery-services__link">Дізнатись деталі <img src="./assets/svg/right-arrow.svg" alt="right arrow"/> </a>
-                </div>
-                <img src="./assets/images/delivery-services_2.jpg" alt="США" class="delivery-services__image" />
-              </div>  
-              <div class="delivery-services__item">
-                <span class="delivery-services__index">03</span>
-                <div class="delivery-services__content">
-                  <div>
-                    <h3 class="delivery-services__country">Європа</h3>
-                    <p class="delivery-services__description">Наша компанія має великий досвід у сфері міжнародної логістики та автомобільного експорту з Європи, оскільки процес доставки з Європи може варіюватися в залежності від конкретних умов та послуг. </p>
-                  </div>
-             
-                  <a href="#" class="delivery-services__link">Дізнатись деталі <img src="./assets/svg/right-arrow.svg" alt="right arrow"/> </a>
-                </div>
-                <img src="./assets/images/delivery-services_3.jpg" alt="США" class="delivery-services__image" />
-              </div>
-              <div class="delivery-services__item">
-                <span class="delivery-services__index">04</span>
-                <div class="delivery-services__content">
-                  <div>
-                    <h3 class="delivery-services__country">Китай</h3>
-                    <p class="delivery-services__description">Наша компанія пропонує послуги з доставки автомобілів 
-                      з Китаю, де ви зможете знайти широкий асортимент якісних автомобілів за вигідними умовами. </p>
-                  </div>
-             
-                  <a href="#" class="delivery-services__link">Дізнатись деталі <img src="./assets/svg/right-arrow.svg" alt="right arrow"/> </a>
-                </div>
-                <img src="./assets/images/delivery-services_4.jpg" alt="США" class="delivery-services__image" />
-              </div>        
-            </div>
-          </div>   
-        </div>
-      </section>
-      <section class="process-steps mb-160">
-        <div class="container">
-          <div class="process-steps__inner">
-            <div class="process-steps__header">
-              <h2>Етапи нашої співпраці </h2>
-              <p class="subtitle">Для прозорості всього процесу, 
-                ми дотримуємося певних правил</p>
-            </div>
-            <div class="process-steps__list">
-              <div class="process-steps__item">
-                <div class="process-steps__item-header">
-                  <div class="process-steps__index-wrapper">
-                    <span class="process-steps__index">01</span>
-                    <h3 class="process-steps__name">Підбір авто</h3>
-                  </div> 
-                  <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus" src="./assets/svg/plus.svg" /></button>
-                </div>
-                <div class="process-steps__details">
-                  <p>Наші спеціалісти підберуть та розрахують авто згідно з вашими побажаннями та бюджетом: марка, модель, рік, стан авто, пробіг, комплектація, колір тощо. Також ретельно перевірять історію 
-                    автомобіля і проконсультують щодо ремонту, щоб ви отримали 
-                    дійсно якісне авто.</p>
-                </div>
-              </div>
-              <div class="process-steps__item">
-                <div class="process-steps__item-header">
-                  <div class="process-steps__index-wrapper">
-                    <span class="process-steps__index">02</span>
-                    <h3 class="process-steps__name">Торги</h3>
-                  </div> 
-                  <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus" src="./assets/svg/plus.svg" /></button>
-                </div>
-                <div class="process-steps__details">
-                  <p>Наші менеджери проконсультують вас за яку ціну краще брати той чи інший автомобіль та коли саме, бо інколи краще трохи почекати, щоб 
-                    в результаті отримати дійсно хороший і вигідний варіант.</p>
-                    <p>
-                      Сам процес торгів може проходити по різному: це можуть бути живі онлайн торги в телефонному режимі, може бути пряма покупка, або автоматична ставка - все залежить тільки від вас.
-                    </p>
-                </div>
-              </div>
-              <div class="process-steps__item">
-                <div class="process-steps__item-header">
-                  <div class="process-steps__index-wrapper">
-                    <span class="process-steps__index">03</span>
-                    <h3 class="process-steps__name">Оплата</h3>
-                  </div> 
-                  <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus" src="./assets/svg/plus.svg" /></button>
-                </div>
-                <div class="process-steps__details">
-                  <p>Після виграшу робиться інвойс на оплату, який ви маєте сплатити аукціону протягом наступних двох днів.</p>
-                  
-                  <div class="process-steps__description">
-                    <p>Весь процес оплати умовно можна розділити на 3 етапи:</p>
-                  
-                    <ul class="process-steps__option-list">
-                      <li>оплата лота</li>
-                      <li>логістика</li>
-                      <li>розмитнення</li>
-                    </ul> 
-                  </div>
-                 
-                  
-                  <p>Всі рахунки, які необхідно буде сплатити, будуть відомі вам заздалегідь до торгів, вони є офіційними та незмінними, ви сплачуєте їх особисто через банк, ніякої готівки.</p>
-                </div>
-              </div>
-              <div class="process-steps__item">
-                <div class="process-steps__item-header">
-                  <div class="process-steps__index-wrapper">
-                    <span class="process-steps__index">04</span>
-                    <h3 class="process-steps__name">Транспортування</h3>
-                  </div> 
-                  <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus" src="./assets/svg/plus.svg" /></button>
-                </div>
-                <div class="process-steps__details">
-                  <p>Після оплати авто проходить етап логістики. Наші водії забирають автомобіль з аукціону і везуть на наш власний майданчик, де він чекатиме завантаження в контейнер. Далі контейнер прямує до порту, 
-                    де його розвантажують.</p>
-                    <p>
-                      Після відкриття контейнера наступає етап логістики  в Україну. Ми пропонуємо доставку в будь-яку точку України.
-                    </p>
-                </div>
-              </div>
-              <div class="process-steps__item">
-                <div class="process-steps__item-header">
-                  <div class="process-steps__index-wrapper">
-                    <span class="process-steps__index">05</span>
-                    <h3 class="process-steps__name">Розмитнення</h3>
-                  </div> 
-                  <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus" src="./assets/svg/plus.svg" /></button>
-                </div>
-                <div class="process-steps__details">
-                  <p>Наші кваліфіковані брокери, які знають усі нюанси процедури розмитнення, вірного нарахування митних платежів та швидкого оформлення митних документів допоможуть вам пройти цей етап і оплатити кошти на офіційні реквізити митниці.</p>
-                </div>
-              </div>
-              <div class="process-steps__item">
-                <div class="process-steps__item-header">
-                  <div class="process-steps__index-wrapper">
-                    <span class="process-steps__index">06</span>
-                    <h3 class="process-steps__name">ремонт</h3>
-                  </div> 
-                  <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus" src="./assets/svg/plus.svg" /></button>
-                </div>
-                <div class="process-steps__details">
-                  <p>Після того, як авто прибуло , його необхідно відремонтувати, пройти сертифікацію та поставити авто на облік. Клієнти самостійно обирають  
-                    де ремонтувати авто, але ми теж можемо запропонувати вам якісний ремонт авто і допомогу в оформленні сертифікації.</p>
-                </div>
-              </div>
-            </div>
-          </div>   
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+    </section>
+
+    <section class="services mb-160">
       <div class="container">
-        <div class="footer__inner">
-          <div class="footer__section footer__section--branding">
-            <img src="assets/svg/white-logo.svg" alt="Automarket Logo" class="footer__logo" />
-            <div class="footer__social-links">
-              <a target="_blank" href="#" class="footer__social-link"><img src="./assets/svg/instagram.svg" alt="Instagram" /></a>
-              <a target="_blank" href="#" class="footer__social-link"><img src="./assets/svg/telegram.svg" alt="Telegram" /></a>
-              <a target="_blank" href="#" class="footer__social-link"><img src="./assets/svg/whatsapp.svg" alt="WhatsApp" /></a>
-              <a target="_blank" href="#" class="footer__social-link"><img src="./assets/svg/tiktok.svg" alt="TikTok" /></a>
-            </div>
-          </div>
-          
-          <div class="footer__section footer__section--menu">
-            <h3 class="footer__title">Меню</h3>
-            <ul class="footer__menu">
-              <li><a href="#" class="footer__menu-link">Про нас</a></li>
-              <li><a href="#" class="footer__menu-link">Доставка</a></li>
-              <li><a href="#" class="footer__menu-link">Послуги</a></li>
-              <li><a href="#" class="footer__menu-link">Відгуки</a></li>
-              <li><a href="#" class="footer__menu-link">Каталог</a></li>
-              <li><a href="#" class="footer__menu-link">Сервіс</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer__section footer__section--contacts">
-            <h3 class="footer__title">Контакти</h3>
-            <address class="footer__address">
-                Івано-Франківськ<br />
-                вул Галицька 203/1<br />
-                76008<br />
-              <a href="tel:+380990005335" class="footer__phone">+38099 000 5335</a>
-            </address>
-          </div>
-          
-          <div class="footer__section footer__section--subscribe">
-            <h3 class="footer__title">Підписатися на розсилку</h3>
-            <p class="footer__description">Залишайте свій номер телефону і отримуйте першими усі наші акційні пропозиції!</p>
-            <form class="footer__form">
-              <input  type="number" placeholder="Ваш номер телефону" class="custom-input" />
-              <button type="button" class="footer__submit-button">НАДІСЛАТИ</button>
-            </form>
-          </div>
-        </div>
-        
-        <div class="footer__bottom">
-          <div>
-            <a href="#" class="footer__bottom-link">Політика конфіденційності</a>
-            <a href="#" class="footer__bottom-link">Договір публічної оферти</a>
-          </div>
-          <span class="footer__copyright">2024</span>
+        <div class="services__header">
+          <h2>Наші послуги</h2>
+          <p class="subtitle">Наша команда кваліфікованих фахівців готова забезпечити нашим клієнтам повний спектр
+            послуг для автомобілів</p>
         </div>
       </div>
-    </footer>
 
-    <script src="./js/toggle.js"></script>
-  </body>
+      <div class="custom-swiper-container">
+        <div class="custom__swiper-wrapper">
+          <div class="services__item">
+            <div class="services__item-header">
+              <div class="services__image-block">
+                <img src="./assets/svg/services-1.svg" alt="services image" />
+              </div>
+              <p class="services__item-index">01</p>
+            </div>
+            <div class="services__item-content">
+              <h3 class="services__item-title">Авто під замовлення</h3>
+              <p class="services__item-text">
+                Авто під замовлення з США/ Кореї/ Європи/ Китаю
+              </p>
+              <div class="services__item-link">
+                <a href="#" class="services__item-link">Детальніше <img src="./assets/svg/right-arrow.svg"
+                    alt="right arrow" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-header">
+              <div class="services__image-block">
+                <img src="./assets/svg/services-2.svg" alt="services image" />
+              </div>
+              <p class="services__item-index">02</p>
+            </div>
+            <div class="services__item-content">
+              <h3 class="services__item-title">послуга Tdade-in</h3>
+              <p class="services__item-text">
+                Викуп вашого авто, допомога у продажі і обміні автомобіля
+              </p>
+              <div class="services__item-link">
+                <a href="#" class="services__item-link">Детальніше <img src="./assets/svg/right-arrow.svg"
+                    alt="right arrow" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-header">
+              <div class="services__image-block">
+                <img src="./assets/svg/services-3.svg" alt="services image" />
+              </div>
+              <p class="services__item-index">03</p>
+            </div>
+            <div class="services__item-content">
+              <h3 class="services__item-title">сервіс для Автомобілів</h3>
+              <p class="services__item-text">
+                Фарбування, полірування та хімчистка автомобілів
+              </p>
+              <div class="services__item-link">
+                <a href="#" class="services__item-link">Детальніше <img src="./assets/svg/right-arrow.svg"
+                    alt="right arrow" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-header">
+              <div class="services__image-block">
+                <img src="./assets/svg/services-4.svg" alt="services image" />
+              </div>
+              <p class="services__item-index">04</p>
+            </div>
+            <div class="services__item-content">
+              <h3 class="services__item-title">КРЕДИТУВАННЯ на авто</h3>
+              <p class="services__item-text">
+                Пропонуємо кредитування з мінімальними відсотками
+              </p>
+              <div class="services__item-link">
+                <a href="#" class="services__item-link">Детальніше <img src="./assets/svg/right-arrow.svg"
+                    alt="right arrow" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-header">
+              <div class="services__image-block">
+                <img src="./assets/svg/services-5.svg" alt="services image" />
+              </div>
+              <p class="services__item-index">05</p>
+            </div>
+            <div class="services__item-content">
+              <h3 class="services__item-title">послуги евакуатора</h3>
+              <p class="services__item-text">
+                Пропонуємо послуги евакуатора на території України та за її межами
+              </p>
+              <div class="services__item-link">
+                <a href="#" class="services__item-link">Детальніше <img src="./assets/svg/right-arrow.svg"
+                    alt="right arrow" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="services__item">
+            <div class="services__item-header">
+              <div class="services__image-block">
+                <img src="./assets/svg/services-6.svg" alt="services image" />
+              </div>
+              <p class="services__item-index">06</p>
+            </div>
+            <div class="services__item-content">
+              <h3 class="services__item-title">послуги автомайданчика</h3>
+              <p class="services__item-text">
+                Продаж, збереженням і догляд за авто на нашому автомайданчику
+              </p>
+              <div class="services__item-link">
+                <a href="#" class="services__item-link">Детальніше <img src="./assets/svg/right-arrow.svg"
+                    alt="right arrow" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="promotion">
+      <div class="promotion-slider-background">
+        <div class="promotion-slide active" style="background-image: url('/assets/images/bgCar-1.jpg');"></div>
+        <div class="promotion-slide" style="background-image: url('/assets/images/bgCar-1.jpg');"></div>
+        <div class="promotion-slide" style="background-image: url('/assets/images/bgCar-1.jpg');"></div>
+        <div class="promotion-slide" style="background-image: url('/assets/images/bgCar-1.jpg');"></div>
+      </div>
+      <div class="container container--position">
+        <h2 class="promotion__title">акція тижня</h2>
+        <div class="promotion-card">
+          <div class="promotion-card__header">
+            <h3 class="promotion-card__title">AUDI A7</h3>
+            <div class="promotion-card__price-block">
+              <p class="promotion-card__price">33 900$</p>
+              <p class="promotion-card__old-price">35 900$</p>
+            </div>
+          </div>
+          <img src="./assets/images/bgCar-1.jpg" alt="Car Image" class="promotion-card__image" />
+          <div class="promotion-card__info">
+            <div class="promotion-card__details">
+              <div class="promotion-card__detail"><span>285 тис км</span> <span
+                  class="promotion-card__detail-key">Пробіг</span> </div>
+              <div class="promotion-card__detail"> <span>Дизель 3.0</span> <span
+                  class="promotion-card__detail-key">Двигун</span> </div>
+              <div class="promotion-card__detail"><span>2012</span> <span class="promotion-card__detail-key">Рік
+                  випуску</span></div>
+            </div>
+            <button class="promotion-card__btn">КОНСУЛЬТАЦІЯ</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="catalog mb-160">
+      <div class="container overflow-hidden">
+        <div class="catalog__inner">
+          <div class="catalog__header">
+            <h2>Каталог наших Автомобілів</h2>
+            <p class="subtitle">Пропонуємо вам широкий вибір автомобілів в наявності</p>
+          </div>
+          <div class="swiper-container-for-car">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="./assets/images/car-1.png" alt="Car Image" class="card__image" />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail"><span>285 тис км</span> <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail"> <span>Дизель 3.0</span> <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail"><span>2012</span> <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <button class="card__btn">Детальніше</button>
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="./assets/images/car-2.png" alt="Car Image" class="card__image" />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Ford Kuga</h3>
+                      <p class="card__price">13700 $</p>
+                      <div class="card__details">
+                        <div class="card__detail"><span>184 тис км</span> <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail"> <span>Бензин 1.5</span> <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail"><span>2016</span> <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <button class="card__btn">Детальніше</button>
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="./assets/images/car-3.png" alt="Car Image" class="card__image" />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">BMW G30</h3>
+                      <p class="card__price">43000 $</p>
+                      <div class="card__details">
+                        <div class="card__detail"><span>65 тис км</span> <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail"> <span>Бензин 3.0</span> <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail"><span>2020</span> <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <button class="card__btn">Детальніше</button>
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="./assets/images/car-4.png" alt="Car Image" class="card__image" />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Kia Sportage</h3>
+                      <p class="card__price">19600 $</p>
+                      <div class="card__details">
+                        <div class="card__detail"><span>121 тис км</span> <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail"> <span>Дидзель 1.6</span> <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail"><span>2019</span> <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <button class="card__btn">Детальніше</button>
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="./assets/images/car-1.png" alt="Car Image" class="card__image" />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail"><span>285 тис км</span> <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail"> <span>Дизель 3.0</span> <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail"><span>2012</span> <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <button class="card__btn">Детальніше</button>
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="./assets/images/car-2.png" alt="Car Image" class="card__image" />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Ford Kuga</h3>
+                      <p class="card__price">13700 $</p>
+                      <div class="card__details">
+                        <div class="card__detail"><span>184 тис км</span> <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail"> <span>Бензин 1.5</span> <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail"><span>2016</span> <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <button class="card__btn">Детальніше</button>
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="./assets/images/car-3.png" alt="Car Image" class="card__image" />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">BMW G30</h3>
+                      <p class="card__price">43000 $</p>
+                      <div class="card__details">
+                        <div class="card__detail"><span>65 тис км</span> <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail"> <span>Бензин 3.0</span> <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail"><span>2020</span> <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <button class="card__btn">Детальніше</button>
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <img src="./assets/images/car-4.png" alt="Car Image" class="card__image" />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Kia Sportage</h3>
+                      <p class="card__price">19600 $</p>
+                      <div class="card__details">
+                        <div class="card__detail"><span>121 тис км</span> <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail"> <span>Дидзель 1.6</span> <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail"><span>2019</span> <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <button class="card__btn">Детальніше</button>
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-swiper-pagination">
+              <div class="custom-button-prev-for-car slider-button-prev">
+                <img alt="prev" src="./assets/svg/prev.svg" />
+              </div>
+              <div class="custom-button-next-for-car slider-button-next">
+                <img alt="next" src="./assets/svg/next.svg" />
+              </div>
+            </div>
+          </div>
+          <a class="catalog__btn">Дивитись усі</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery-services mb-160">
+      <div class="container">
+        <div class="delivery-services__inner">
+          <div class="delivery-services__header">
+            <h2>Авто під замовлення</h2>
+            <p class="subtitle">Пропонуємо доставку автомобілів за доступною ціною з усіх куточків світу</p>
+          </div>
+
+          <div class="delivery-services__list">
+            <div class="delivery-services__item">
+              <span class="delivery-services__index">01</span>
+              <div class="delivery-services__content">
+                <div>
+                  <h3 class="delivery-services__country">США</h3>
+                  <p class="delivery-services__description">Наша компанія пропонує повний спектр послуг з доставки
+                    автомобілів з США, пропонуючи індивідуальний підхід
+                    до кожного клієнта і розробляючи оптимальний маршрут доставки.</p>
+                </div>
+
+                <a href="#" class="delivery-services__link">Дізнатись деталі <img src="./assets/svg/right-arrow.svg"
+                    alt="right arrow" /> </a>
+              </div>
+              <img src="./assets/images/delivery-services_1.jpg" alt="США" class="delivery-services__image" />
+            </div>
+            <div class="delivery-services__item">
+              <span class="delivery-services__index">02</span>
+              <div class="delivery-services__content">
+                <div>
+                  <h3 class="delivery-services__country">Корея</h3>
+                  <p class="delivery-services__description">Дилерська компанія AutoMarket надає повний спектр послуг для
+                    вашої зручності та безпеки під час процесу купівлі автомобілів з Кореї . </p>
+                </div>
+
+                <a href="#" class="delivery-services__link">Дізнатись деталі <img src="./assets/svg/right-arrow.svg"
+                    alt="right arrow" /> </a>
+              </div>
+              <img src="./assets/images/delivery-services_2.jpg" alt="США" class="delivery-services__image" />
+            </div>
+            <div class="delivery-services__item">
+              <span class="delivery-services__index">03</span>
+              <div class="delivery-services__content">
+                <div>
+                  <h3 class="delivery-services__country">Європа</h3>
+                  <p class="delivery-services__description">Наша компанія має великий досвід у сфері міжнародної
+                    логістики та автомобільного експорту з Європи, оскільки процес доставки з Європи може варіюватися в
+                    залежності від конкретних умов та послуг. </p>
+                </div>
+
+                <a href="#" class="delivery-services__link">Дізнатись деталі <img src="./assets/svg/right-arrow.svg"
+                    alt="right arrow" /> </a>
+              </div>
+              <img src="./assets/images/delivery-services_3.jpg" alt="США" class="delivery-services__image" />
+            </div>
+            <div class="delivery-services__item">
+              <span class="delivery-services__index">04</span>
+              <div class="delivery-services__content">
+                <div>
+                  <h3 class="delivery-services__country">Китай</h3>
+                  <p class="delivery-services__description">Наша компанія пропонує послуги з доставки автомобілів
+                    з Китаю, де ви зможете знайти широкий асортимент якісних автомобілів за вигідними умовами. </p>
+                </div>
+
+                <a href="#" class="delivery-services__link">Дізнатись деталі <img src="./assets/svg/right-arrow.svg"
+                    alt="right arrow" /> </a>
+              </div>
+              <img src="./assets/images/delivery-services_4.jpg" alt="США" class="delivery-services__image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-steps mb-160">
+      <div class="container">
+        <div class="process-steps__inner">
+          <div class="process-steps__header">
+            <h2>Етапи нашої співпраці </h2>
+            <p class="subtitle">Для прозорості всього процесу,
+              ми дотримуємося певних правил</p>
+          </div>
+          <div class="process-steps__list">
+            <div class="process-steps__item">
+              <div class="process-steps__item-header">
+                <div class="process-steps__index-wrapper">
+                  <span class="process-steps__index">01</span>
+                  <h3 class="process-steps__name">Підбір авто</h3>
+                </div>
+                <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus"
+                    src="./assets/svg/plus.svg" /></button>
+              </div>
+              <div class="process-steps__details">
+                <p>Наші спеціалісти підберуть та розрахують авто згідно з вашими побажаннями та бюджетом: марка, модель,
+                  рік, стан авто, пробіг, комплектація, колір тощо. Також ретельно перевірять історію
+                  автомобіля і проконсультують щодо ремонту, щоб ви отримали
+                  дійсно якісне авто.</p>
+              </div>
+            </div>
+            <div class="process-steps__item">
+              <div class="process-steps__item-header">
+                <div class="process-steps__index-wrapper">
+                  <span class="process-steps__index">02</span>
+                  <h3 class="process-steps__name">Торги</h3>
+                </div>
+                <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus"
+                    src="./assets/svg/plus.svg" /></button>
+              </div>
+              <div class="process-steps__details">
+                <p>Наші менеджери проконсультують вас за яку ціну краще брати той чи інший автомобіль та коли саме, бо
+                  інколи краще трохи почекати, щоб
+                  в результаті отримати дійсно хороший і вигідний варіант.</p>
+                <p>
+                  Сам процес торгів може проходити по різному: це можуть бути живі онлайн торги в телефонному режимі,
+                  може бути пряма покупка, або автоматична ставка - все залежить тільки від вас.
+                </p>
+              </div>
+            </div>
+            <div class="process-steps__item">
+              <div class="process-steps__item-header">
+                <div class="process-steps__index-wrapper">
+                  <span class="process-steps__index">03</span>
+                  <h3 class="process-steps__name">Оплата</h3>
+                </div>
+                <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus"
+                    src="./assets/svg/plus.svg" /></button>
+              </div>
+              <div class="process-steps__details">
+                <p>Після виграшу робиться інвойс на оплату, який ви маєте сплатити аукціону протягом наступних двох
+                  днів.</p>
+
+                <div class="process-steps__description">
+                  <p>Весь процес оплати умовно можна розділити на 3 етапи:</p>
+
+                  <ul class="process-steps__option-list">
+                    <li>оплата лота</li>
+                    <li>логістика</li>
+                    <li>розмитнення</li>
+                  </ul>
+                </div>
+
+
+                <p>Всі рахунки, які необхідно буде сплатити, будуть відомі вам заздалегідь до торгів, вони є офіційними
+                  та незмінними, ви сплачуєте їх особисто через банк, ніякої готівки.</p>
+              </div>
+            </div>
+            <div class="process-steps__item">
+              <div class="process-steps__item-header">
+                <div class="process-steps__index-wrapper">
+                  <span class="process-steps__index">04</span>
+                  <h3 class="process-steps__name">Транспортування</h3>
+                </div>
+                <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus"
+                    src="./assets/svg/plus.svg" /></button>
+              </div>
+              <div class="process-steps__details">
+                <p>Після оплати авто проходить етап логістики. Наші водії забирають автомобіль з аукціону і везуть на
+                  наш власний майданчик, де він чекатиме завантаження в контейнер. Далі контейнер прямує до порту,
+                  де його розвантажують.</p>
+                <p>
+                  Після відкриття контейнера наступає етап логістики  в Україну. Ми пропонуємо доставку в будь-яку точку
+                  України.
+                </p>
+              </div>
+            </div>
+            <div class="process-steps__item">
+              <div class="process-steps__item-header">
+                <div class="process-steps__index-wrapper">
+                  <span class="process-steps__index">05</span>
+                  <h3 class="process-steps__name">Розмитнення</h3>
+                </div>
+                <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus"
+                    src="./assets/svg/plus.svg" /></button>
+              </div>
+              <div class="process-steps__details">
+                <p>Наші кваліфіковані брокери, які знають усі нюанси процедури розмитнення, вірного нарахування митних
+                  платежів та швидкого оформлення митних документів допоможуть вам пройти цей етап і оплатити кошти на
+                  офіційні реквізити митниці.</p>
+              </div>
+            </div>
+            <div class="process-steps__item">
+              <div class="process-steps__item-header">
+                <div class="process-steps__index-wrapper">
+                  <span class="process-steps__index">06</span>
+                  <h3 class="process-steps__name">ремонт</h3>
+                </div>
+                <button class="process-steps__toggle" onclick="toggleDetails(this)"><img alt="plus"
+                    src="./assets/svg/plus.svg" /></button>
+              </div>
+              <div class="process-steps__details">
+                <p>Після того, як авто прибуло , його необхідно відремонтувати, пройти сертифікацію та поставити авто на
+                  облік. Клієнти самостійно обирають
+                  де ремонтувати авто, але ми теж можемо запропонувати вам якісний ремонт авто і допомогу в оформленні
+                  сертифікації.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact mb-160">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__header">
+            <p class="contact__info-text">Зв’язатися з нами</p>
+          </div>
+          <form class="contact__form" id="contactForm">
+            <h2 class="contact__title">Залишайте дані і з вами зв’яжеться
+              наш менеджер в найкоротші терміни</h2>
+            <div class="contact__flex-block">
+              <input type="text" placeholder="Ваше ім’я" class="custom-input" required />
+              <input type="number" placeholder="Номер телефону" class="custom-input" required />
+            </div>
+            <div class="contact__textarea-block">
+              <input type="text" placeholder="Коментар..." class="custom-input" />
+            </div>
+            <div class="contact__checkbox">
+              <input type="checkbox" id="privacy-policy" required />
+              <label for="privacy-policy">Я погоджуюсь з правилами конфіденційності</label>
+            </div>
+            <button type="button" class="contact__submit-button" onclick="submitForm()">Надіслати</button>
+          </form>
+
+          <div class="contact__form" id="successMessage" style="display: none;">
+            <h2 class="contact__title--success">Дякуємо, ваш запит надіслано!</h2>
+            <div class="contact__description">
+              <p class="contact__description--text">
+                Ми цінуємо вашу зацікавленість і готовність зв’язатися з нами.
+              </p>
+              <p class="contact__description--text">
+                Наші фахівці переглянуть ваш запит та обов’язково зв’яжуться з вами найближчим часом.
+              </p>
+            </div>
+            <p class="contact__description--success">Дякуємо, що обрали нас!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="comments mb-160">
+      <div class="container overflow-hidden">
+        <div class="comments__inner">
+          <div class="comments__header">
+            <h2>наші клієнти <br />
+              говорять про нас</h2>
+            <p class="subtitle">Ми цінуємо наших клієнтів, чекаємо на ваші відгуки, щоб покращувати сервіс, який вам
+              пропонуємо</p>
+          </div>
+          <div class="swiper-container-for-comments">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="comments__user-wrapper">
+                  <div class="comments__user-info">
+                    <div class="comments__user">
+                      <h3 class="comments__user-name">Дмитро Мельник</h3>
+                      <p class="comments__user-text">власник Volkswagen Passat</p>
+                    </div>
+                    <img class="comments__user-image" alt="user icon" src="./assets/images/user-1.jpg" />
+                  </div>
+                  <div class="comments__user-comment">
+                    <p class="comments__user-comment-text">Мав нагоду придбати автомобіль, дуже задоволений сервісом ,
+                      хлопці знають свою роботу та чітко її виконують. ...</p>
+                    <a class="comments__user-comment-link">Читати більше</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="comments__user-wrapper">
+                  <div class="comments__user-info">
+                    <div class="comments__user">
+                      <h3 class="comments__user-name">Іван Камінь</h3>
+                      <p class="comments__user-text">власник Ford Fusion</p>
+                    </div>
+                    <img class="comments__user-image" alt="user icon" src="./assets/images/user-2.jpg" />
+                  </div>
+                  <div class="comments__user-comment">
+                    <p class="comments__user-comment-text">Дуже задоволений сервісом, все виконано вчасно і без жодних
+                      переплат. Взяв вже друге авто і все на вищому рівні. ....</p>
+                    <a class="comments__user-comment-link">Читати більше</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="comments__user-wrapper">
+                  <div class="comments__user-info">
+                    <div class="comments__user">
+                      <h3 class="comments__user-name">Юлія Гринчак</h3>
+                      <p class="comments__user-text">власниця Hyundai Ioniq</p>
+                    </div>
+                    <img class="comments__user-image" alt="user icon" src="./assets/images/user-3.jpg" />
+                  </div>
+                  <div class="comments__user-comment">
+                    <p class="comments__user-comment-text">Звернулася в AUTOMARKET
+                      і залишилась дуже задоволена! Хлопці допомогли обрати ідеальне авто, професійно ...</p>
+                    <a class="comments__user-comment-link">Читати більше</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="comments__user-wrapper">
+                  <div class="comments__user-info">
+                    <div class="comments__user">
+                      <h3 class="comments__user-name">Артур Петрина</h3>
+                      <p class="comments__user-text">власник Volkswagen Touareg</p>
+                    </div>
+                    <img class="comments__user-image" alt="user icon" src="./assets/images/user-4.jpg" />
+                  </div>
+                  <div class="comments__user-comment">
+                    <p class="comments__user-comment-text">Скористався послугою купівлею автомобіля, дуже задоволений,
+                      працівники ввічливі та підібрали саме те авто яке я ....</p>
+                    <a class="comments__user-comment-link">Читати більше</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="comments__user-wrapper">
+                  <div class="comments__user-info">
+                    <div class="comments__user">
+                      <h3 class="comments__user-name">Rus Bill</h3>
+                      <p class="comments__user-text">власник BMW x3</p>
+                    </div>
+                    <img class="comments__user-image" alt="user icon" src="./assets/images/user-5.jpg" />
+                  </div>
+                  <div class="comments__user-comment">
+                    <p class="comments__user-comment-text">Круті спеціалісти,завжди звертаюсь за порадами до них з
+                      приводу покупки авто, або продажу ...</p>
+                    <a class="comments__user-comment-link">Читати більше</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="comments__user-wrapper">
+                  <div class="comments__user-info">
+                    <div class="comments__user">
+                      <h3 class="comments__user-name">Андрій Дитинко</h3>
+                      <p class="comments__user-text">власник Audi A7</p>
+                    </div>
+                    <img class="comments__user-image" alt="user icon" src="./assets/images/user-6.jpg" />
+                  </div>
+                  <div class="comments__user-comment">
+                    <p class="comments__user-comment-text">Автосалон "Автомаркет" приємно здивував мене сервісом та
+                      якістю обслуговування. Від самого входу відчувається увага до клієнта: ...</p>
+                    <a class="comments__user-comment-link">Читати більше</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="comments__user-wrapper">
+                  <div class="comments__user-info">
+                    <div class="comments__user">
+                      <h3 class="comments__user-name">Olgа Ivanova</h3>
+                      <p class="comments__user-text">власнця Hyundai Tucson</p>
+                    </div>
+                    <img class="comments__user-image" alt="user icon" src="./assets/images/user-7.jpg" />
+                  </div>
+                  <div class="comments__user-comment">
+                    <p class="comments__user-comment-text">Чудовий сервіс! Дуже задоволена роботою. Хлопці знають свою
+                      справу і дуже відповідально відносяться до роботи. ...</p>
+                    <a class="comments__user-comment-link">Читати більше</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-swiper-pagination">
+              <div class="custom-button-prev-for-comments slider-button-prev">
+                <img alt="prev" src="./assets/svg/prev.svg" />
+              </div>
+              <div class="custom-button-next-for-comments slider-button-next">
+                <img alt="next" src="./assets/svg/next.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section footer__section--branding">
+          <img src="assets/svg/white-logo.svg" alt="Automarket Logo" class="footer__logo" />
+          <div class="footer__social-links">
+            <a target="_blank" href="#" class="footer__social-link"><img src="./assets/svg/instagram.svg"
+                alt="Instagram" /></a>
+            <a target="_blank" href="#" class="footer__social-link"><img src="./assets/svg/telegram.svg"
+                alt="Telegram" /></a>
+            <a target="_blank" href="#" class="footer__social-link"><img src="./assets/svg/whatsapp.svg"
+                alt="WhatsApp" /></a>
+            <a target="_blank" href="#" class="footer__social-link"><img src="./assets/svg/tiktok.svg"
+                alt="TikTok" /></a>
+          </div>
+        </div>
+
+        <div class="footer__section footer__section--menu">
+          <h3 class="footer__title">Меню</h3>
+          <ul class="footer__menu">
+            <li><a href="#" class="footer__menu-link">Про нас</a></li>
+            <li><a href="#" class="footer__menu-link">Доставка</a></li>
+            <li><a href="#" class="footer__menu-link">Послуги</a></li>
+            <li><a href="#" class="footer__menu-link">Відгуки</a></li>
+            <li><a href="#" class="footer__menu-link">Каталог</a></li>
+            <li><a href="#" class="footer__menu-link">Сервіс</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section footer__section--contacts">
+          <h3 class="footer__title">Контакти</h3>
+          <address class="footer__address">
+            Івано-Франківськ<br />
+            вул Галицька 203/1<br />
+            76008<br />
+            <a href="tel:+380990005335" class="footer__phone">+38099 000 5335</a>
+          </address>
+        </div>
+
+        <div class="footer__section footer__section--subscribe">
+          <h3 class="footer__title">Підписатися на розсилку</h3>
+          <p class="footer__description">Залишайте свій номер телефону і отримуйте першими усі наші акційні пропозиції!
+          </p>
+          <form class="footer__form">
+            <input type="number" placeholder="Ваш номер телефону" class="custom-input" />
+            <button type="button" class="footer__submit-button">НАДІСЛАТИ</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div>
+          <a href="#" class="footer__bottom-link">Політика конфіденційності</a>
+          <a href="#" class="footer__bottom-link">Договір публічної оферти</a>
+        </div>
+        <span class="footer__copyright">2024</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/toggle.js"></script>
+  <script src="./js/swiperForComments.js"></script>
+  <script src="./js/main.js"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="./js/horizontalScroll.js"></script>
+</body>
+
 </html>

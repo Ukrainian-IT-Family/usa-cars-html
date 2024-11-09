@@ -1,0 +1,154 @@
+.promotion {
+  max-width: 1440px;
+  max-height: 880px;
+  height: 100%;
+  width: 100%;
+
+  height: 880px;
+
+  background-size: cover;
+  backgroun-repeat: no-repeat;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 160px auto;
+}
+
+.promotion-slider-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container--position {
+  position: absolute;
+  z-index: 2;
+}
+
+.promotion-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.promotion-slide.active {
+  opacity: 1;
+}
+
+.promotion__title {
+  color: white;
+  margin-bottom: 56px;
+}
+
+.promotion-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #eeeeed;
+  padding: 30px 30px 23px 30px;
+  border-radius: 6px;
+
+  height: 538px;
+  width: 372px;
+}
+
+.promotion-card__image {
+  min-width: 312px;
+  height: auto;
+
+  border-radius: 6px;
+}
+
+.promotion-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.promotion-card__title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 29.96px;
+}
+
+.promotion-card__price-block {
+  text-align: right;
+  text-direction: ;
+}
+
+.promotion-card__price {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.51px;
+}
+
+.promotion-card__old-price {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.07px;
+
+  text-decoration: line-through;
+
+  color: #b7b7b7;
+}
+
+.promotion-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.07px;
+}
+
+.promotion-card__detail-key {
+  color: #676767;
+}
+
+.promotion-card__detail {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid #b7b7b7;
+}
+
+.promotion-card__btn {
+  background-color: #000;
+  color: #fff;
+
+  width: 100%;
+  height: 43px;
+
+  border: none;
+  border-radius: 6px;
+
+  margin-top: 24px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.79px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promotion-card__btn:hover {
+  background-color: #333;
+  color: #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}

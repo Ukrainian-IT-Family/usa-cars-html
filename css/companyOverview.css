@@ -1,0 +1,26 @@
+.company-overview__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 38px;
+}
+
+.company-overview__title {
+  max-width: 904px;
+  width: 100%;
+}
+
+.company-overview__contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  max-width: 304px;
+  width: 100%;
+}
+
+.company-overview__image {
+  width: 100%;
+  height: auto;
+}

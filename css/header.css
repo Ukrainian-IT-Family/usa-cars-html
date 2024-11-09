@@ -1,0 +1,125 @@
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 28px;
+  margin-bottom: 80px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  border-radius: 10px;
+  border: 1.6px solid #b7b7b7;
+
+  padding: 10px 16px 8px 12px;
+}
+
+.header__dropdown {
+  position: relative;
+}
+
+.header__dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 15px;
+
+  background-color: white;
+  height: 39px;
+  width: 160px;
+  font-size: 16px;
+  line-height: 21.79px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.header__dropdown:hover .header__dropdown-btn {
+  background-color: #181818;
+  color: white;
+  transition: all 0.3s;
+  fill: white;
+}
+
+.header__dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-radius: 0 0 6px 6px;
+  top: 100%;
+  left: 0;
+  width: 160px;
+  padding-top: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__dropdown:hover .header__dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header__dropdown-item {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  height: 29px;
+  cursor: pointer;
+}
+
+.header__dropdown-link {
+  font-size: 12px;
+  line-height: 16.34px;
+  border-bottom: 1px solid transparent;
+}
+
+.header__dropdown-item:hover .header__dropdown-link {
+  border-bottom: 1px solid #b7b7b7;
+}
+
+.catalog__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  border-radius: 6px;
+
+  height: 39px;
+  width: 160px;
+}
+
+.catalog__link:hover {
+  background-color: #181818;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+.header__btn {
+  border-radius: 6px;
+  background-color: #eeeeed;
+
+  color: #181818;
+
+  width: 197px;
+  height: 59px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.79px;
+
+  transition: all 0.3s;
+}
+
+.header__btn:hover {
+  background-color: #181818;
+  transition: all 0.3s;
+  color: #ffffff;
+  cursor: pointer;
+}
