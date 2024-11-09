@@ -1,0 +1,80 @@
+.error-page {
+  padding: 40px 20px 80px 20px;
+
+  max-width: 687px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.error-page__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  border-radius: 6px;
+  background-color: white;
+
+  padding: 38px;
+  max-width: 451px;
+  width: 100%;
+
+  position: absolute;
+  left: 50%;
+  top: 38%;
+
+  transform: translateX(-50%);
+}
+
+.error-page__image {
+  max-width: 687px;
+  width: 100%;
+  height:auto;
+}
+
+.error-page__message {
+  text-align: center;
+}
+
+.error-page__title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 29.96px;
+}
+
+.error-page__button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.error-page__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 6px;
+  background-color: #000;
+  color: #fff;
+
+  max-width: 305px;
+  width: 100%;
+  height: 56px;
+
+  margin-top: 172px;
+
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.error-page__button:hover {
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
