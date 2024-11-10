@@ -100,3 +100,54 @@
   line-height: 21.79px;
   color: #676767;
 }
+
+@media (max-width: 1440px) {
+  .custom-swiper-container {
+    padding: 0 0 0 20px;
+  }
+}
+
+@media (max-width: 968px) {
+  .services {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    margin-top: 64px;
+  }
+
+  .services__header {
+    flex-direction: column;
+    gap: 36px;
+    margin-bottom: 20px;
+  }
+
+  .services__item {
+    width: 265px;
+    height: 390px;
+  }
+
+  .services__item-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24.51px;
+  }
+
+  .services__item-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+  }
+
+  .services__item-link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+  }
+
+  .custom__swiper-wrapper {
+    width: 480%;
+  }
+}

@@ -125,6 +125,116 @@
   text-transform: uppercase;
 }
 
+.contact__title--mobile {
+  display: none;
+}
+
 #successMessage {
   display: none;
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    padding: 120px 0;
+  }
+
+  .contact__inner {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .contact__form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact__inner {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .contact__form {
+    max-width: 100%;
+  }
+
+  .contact__title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 43.58px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .contact__flex-block {
+    flex-direction: column;
+    margin-bottom: 64px;
+    gap: 44px;
+  }
+
+  .contact__title {
+    margin-bottom: 44px;
+  }
+
+  .contact__textarea-block {
+    margin-bottom: 12px;
+  }
+
+  .contact__checkbox {
+    margin-bottom: 44px;
+  }
+
+  .contact__submit-button {
+    max-width: 100%;
+  }
+
+  .contact__info-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.79px;
+  }
+
+  .contact__title--mobile {
+    display: block;
+  }
+
+  .contact__title--desktop {
+    display: none;
+  }
+
+  .contact__checkbox label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.34px;
+  }
+
+  .contact__title--success {
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 43.58px;
+  }
+
+  .contact__description--text {
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+
+    max-width: 293px;
+    margin: 0 auto;
+  }
+
+  .contact__description--success {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24.51px;
+    text-align: center;
+  }
 }

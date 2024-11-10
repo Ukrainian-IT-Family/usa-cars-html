@@ -1,18 +1,35 @@
 function toggleDetails(button) {
-  const details = button
-    .closest(".process-steps__item")
-    .querySelector(".process-steps__details");
+  const item = button.closest(".process-steps__item");
+  const details = item.querySelector(".process-steps__details");
 
-  if (details.classList.contains("open")) {
-    details.classList.remove("open");
+  const isMobile = window.innerWidth <= 768;
 
-    details.classList.add("closing");
+  if (
+    details.classList.contains("open") ||
+    details.classList.contains("open-mobile")
+  ) {
+    if (isMobile) {
+      details.classList.remove("open-mobile");
+      details.classList.add("closing-mobile");
+    } else {
+      details.classList.remove("open");
+      details.classList.add("closing");
+    }
+
     details.addEventListener("animationend", function handler() {
-      details.classList.remove("closing");
+      if (isMobile) {
+        details.classList.remove("closing-mobile");
+      } else {
+        details.classList.remove("closing");
+      }
       details.removeEventListener("animationend", handler);
     });
   } else {
-    details.classList.add("open");
+    if (isMobile) {
+      details.classList.add("open-mobile");
+    } else {
+      details.classList.add("open");
+    }
   }
-  button.classList.toggle("open");
+  button.querySelector(".process-steps__toggle").classList.toggle("open");
 }

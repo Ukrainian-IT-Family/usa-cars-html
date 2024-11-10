@@ -1,7 +1,8 @@
 .company-overview__content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 15px;
 
   margin-bottom: 38px;
 }
@@ -21,6 +22,21 @@
 }
 
 .company-overview__image {
+  border-radius: 6px;
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .company-overview__content {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  .company-overview__contact-block {
+    max-width: 100%;
+    gap: 28px;
+  }
 }

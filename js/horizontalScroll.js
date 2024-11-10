@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const process = document.querySelector(".services");
   if (process) {
     let sections = gsap.utils.toArray(".services__item");
+
     gsap.to(sections, {
       xPercent: -95 * (sections.length - 4),
       ease: "power1.inOut",

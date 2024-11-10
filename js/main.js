@@ -23,3 +23,15 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 5000);
+
+document
+  .querySelector(".header__burger")
+  .addEventListener("click", function () {
+    document.getElementById("menuOverlay").classList.add("active");
+    document.body.classList.add("no-scroll");
+  });
+
+document.getElementById("closeMenu").addEventListener("click", function () {
+  document.getElementById("menuOverlay").classList.remove("active");
+  document.body.classList.remove("no-scroll");
+});
