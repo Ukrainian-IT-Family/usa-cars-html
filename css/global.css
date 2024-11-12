@@ -173,6 +173,10 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.swiper-pagination-fraction {
+  width: fit-content;
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -209,5 +213,23 @@ h2 {
     font-size: 36px;
     font-weight: 600;
     line-height: 39.6px;
+  }
+}
+
+@media (max-width: 599px) {
+  .catalog .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .catalog .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .catalog .slider-swiper-pagination {
+    display: none;
   }
 }

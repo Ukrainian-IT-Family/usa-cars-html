@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 20px;
   margin-bottom: 80px;
 }
 
@@ -69,4 +70,40 @@
 
   text-decoration: underline;
   cursor: pointer;
+}
+
+.comments__title--mobile {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .comments__user-wrapper {
+    max-width: 100%;
+  }
+
+  .comments__user-comment-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comments__header {
+    flex-direction: column;
+    gap: 36px;
+    margin-bottom: 28px;
+  }
+
+  .comments__title--mobile {
+    display: block;
+  }
+
+  .comments__title--desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 660px) {
+  .comments__user-wrapper {
+    height: 265px;
+  }
 }

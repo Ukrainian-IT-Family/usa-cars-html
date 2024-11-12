@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 20px;
 
   margin-bottom: 60px;
 }
@@ -30,4 +31,18 @@
 .catalog__btn:hover {
   background-color: #f0f0f0;
   border-color: #8a8a8a;
+}
+
+@media (max-width: 768px) {
+  .catalog__subtitle--none {
+    display: none;
+  }
+
+  .catalog__header {
+    margin-bottom: 36px;
+  }
+
+  .catalog__btn {
+    margin-top: 28px;
+  }
 }
