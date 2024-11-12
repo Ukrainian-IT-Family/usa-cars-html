@@ -5,14 +5,28 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 20,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      767: {
+        slidesPerView: 3,
+      },
+      860: {
+        slidesPerView: 4,
+      },
+      1060: {
+        slidesPerView: 5,
+      },
+      1300: {
+        slidesPerView: 6,
+      },
+    },
   });
 
   let mainSwiper = new Swiper(".main-swiper", {
     loop: false,
     spaceBetween: 20,
     navigation: {
-      prevEl: ".swiper-button-prev-details",
-      nextEl: ".swiper-button-next-details",
+      prevEl: ".swiper-button-prev-details--for-mobile",
+      nextEl: ".swiper-button-next-details--for-mobile",
     },
     pagination: {
       el: ".swiper-pagination",
@@ -27,6 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
     thumbs: {
       swiper: swiperThumbs,
     },
+    breakpoints: {
+      767: {
+        navigation: {
+          prevEl: ".swiper-button-prev-details--for-desktop",
+          nextEl: ".swiper-button-next-details--for-desktop",
+        },
+      },
+    },
     on: {
       init: function () {
         toggleNavigationButtons.call(this);
@@ -40,10 +62,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleNavigationButtons() {
     if (mainSwiper) {
       const prevButton = mainSwiper.el.querySelector(
-        ".swiper-button-prev-details"
+        ".swiper-button-prev-details--for-desktop"
       );
       const nextButton = mainSwiper.el.querySelector(
-        ".swiper-button-next-details"
+        ".swiper-button-next-details--for-desktop"
       );
 
       if (prevButton && nextButton) {

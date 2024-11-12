@@ -191,7 +191,7 @@
             <img src="./assets/svg/homeIcon.svg" alt="Home"
           /></a>
           <img src="./assets/svg/right-arrow.svg" alt="Right Arrow" />
-          <a class="breadcrumb__link">Каталог авто</a>
+          <a href="./catalog.html" class="breadcrumb__link">Каталог авто</a>
           <img src="./assets/svg/right-arrow.svg" alt="Right Arrow" />
           <a class="breadcrumb__link breadcrumb__link--active"
             >Audi A6 Allroad</a
@@ -201,66 +201,160 @@
           <div class="swiper main-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="./assets/images/car.jpg" alt="Car Image" />
+                <img
+                  class="car-details__preview-image"
+                  src="./assets/images/car.jpg"
+                  alt="Car Image"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/car.jpg" alt="Car Image" />
+                <img
+                  class="car-details__preview-image"
+                  src="./assets/images/bgCar-1.jpg"
+                  alt="Car Image"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/car.jpg" alt="Car Image" />
+                <img
+                  class="car-details__preview-image"
+                  src="./assets/images/car.jpg"
+                  alt="Car Image"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/car.jpg" alt="Car Image" />
+                <img
+                  class="car-details__preview-image"
+                  src="./assets/images/car.jpg"
+                  alt="Car Image"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/car.jpg" alt="Car Image" />
+                <img
+                  class="car-details__preview-image"
+                  src="./assets/images/car.jpg"
+                  alt="Car Image"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/car.jpg" alt="Car Image" />
+                <img
+                  class="car-details__preview-image"
+                  src="./assets/images/car.jpg"
+                  alt="Car Image"
+                />
               </div>
               <div class="swiper-slide">
-                <img src="./assets/images/car.jpg" alt="Car Image" />
+                <img
+                  class="car-details__preview-image"
+                  src="./assets/images/car.jpg"
+                  alt="Car Image"
+                />
+              </div>
+            </div>
+
+            <div
+              class="car-details__pagination-wrapper car-details__pagination-wrapper--mobile"
+            >
+              <div class="slider-swiper-pagination car-details__pagination">
+                <div
+                  class="swiper-button-prev-details slider-button-prev swiper-button-prev-details--for-mobile"
+                >
+                  <img alt="prev" src="./assets/svg/prev.svg" />
+                </div>
+                <div
+                  class="swiper-button-next-details slider-button-next swiper-button-next-details--for-mobile"
+                >
+                  <img alt="next" src="./assets/svg/next.svg" />
+                </div>
               </div>
             </div>
           </div>
 
           <div class="car-info">
             <div>
-              <h1 class="car-info__title">AUDI A6 ALLROAD</h1>
+              <div class="car-info__header">
+                <h1 class="car-info__title">AUDI A6 ALLROAD</h1>
+
+                <p class="car-info__price car-info__price--mobile">18900 $</p>
+              </div>
               <ul class="car-info__list">
                 <li class="car-info__item">
+                  <img
+                    src="./assets/svg/calendarIcon.svg"
+                    alt="Calendar"
+                    class="car-info__icon"
+                  />
                   <p class="car-info__subtitle">Рік випуску</p>
                   <p class="car-info__text">2012</p>
                 </li>
                 <li class="car-info__item">
+                  <img
+                    src="./assets/svg/odometrIcon.svg"
+                    alt="Odometer"
+                    class="car-info__icon"
+                  />
                   <p class="car-info__subtitle">Пробіг</p>
                   <p class="car-info__text">285 тис км</p>
                 </li>
                 <li class="car-info__item">
+                  <img
+                    src="./assets/svg/engineIcon.svg"
+                    alt="Engine"
+                    class="car-info__icon"
+                  />
                   <p class="car-info__subtitle">Двигун</p>
                   <p class="car-info__text">3.0</p>
                 </li>
                 <li class="car-info__item">
+                  <img
+                    src="./assets/svg/fuelIcon.svg"
+                    alt="Fuel"
+                    class="car-info__icon"
+                  />
                   <p class="car-info__subtitle">Паливо</p>
                   <p class="car-info__text">Дизель</p>
                 </li>
                 <li class="car-info__item">
+                  <img
+                    src="./assets/svg/gearIcon.svg"
+                    alt="Gear"
+                    class="car-info__icon"
+                  />
                   <p class="car-info__subtitle">Коробка передач</p>
                   <p class="car-info__text">Автомат</p>
                 </li>
                 <li class="car-info__item">
+                  <img
+                    src="./assets/svg/driveIcon.svg"
+                    alt="Drive"
+                    class="car-info__icon"
+                  />
                   <p class="car-info__subtitle">Привід</p>
                   <p class="car-info__text">Повний</p>
                 </li>
                 <li class="car-info__item">
+                  <img
+                    src="./assets/svg/colorIcon.svg"
+                    alt="Color"
+                    class="car-info__icon"
+                  />
                   <p class="car-info__subtitle">Колір</p>
                   <p class="car-info__text">Коричневий</p>
                 </li>
                 <li class="car-info__item">
+                  <img
+                    src="./assets/svg/vinIcon.svg"
+                    alt="VIN"
+                    class="car-info__icon"
+                  />
                   <p class="car-info__subtitle">VIN код</p>
-                  <p class="car-info__text">Наявний</p>
+                  <p class="car-info__text"></p>
                 </li>
                 <li class="car-info__item">
+                  <img
+                    src="./assets/svg/availabilityIcon.svg"
+                    alt="Availability"
+                    class="car-info__icon"
+                  />
                   <p class="car-info__subtitle">Наявність</p>
                   <p class="car-info__text">В наявності</p>
                 </li>
@@ -270,7 +364,27 @@
               <div class="car-info__button-wrapper">
                 <button class="button-black">КОНСУЛЬТАЦІЯ</button>
               </div>
-              <p class="car-info__price">18900 $</p>
+              <p class="car-info__price car-info__price--desktop">18900 $</p>
+            </div>
+            <div class="car-info-actions__mobile">
+              <a class="car-info-actions__link" href="./index.html">
+                <img
+                  class="car-info-actions__link-icon car-info-actions__link-icon--rotated"
+                  src="./assets/svg/right-arrow.svg"
+                  alt="go back icon"
+                />
+                <span class="car-info-actions__link-label"
+                  >Повернутись назад</span
+                >
+              </a>
+              <a class="car-info-actions__link" href="#">
+                <span class="car-info-actions__link-label">Наступне авто</span>
+                <img
+                  class="car-info-actions__link-icon"
+                  src="./assets/svg/right-arrow.svg"
+                  alt="next icon"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -289,7 +403,7 @@
             <div class="swiper-slide">
               <div class="swiper-slide-thumb-wrapper">
                 <img
-                  src="./assets/images/car.jpg"
+                  src="./assets/images/bgCar-1.jpg"
                   alt="Car Image"
                   class="car-slide-small-image"
                 />
@@ -341,15 +455,21 @@
               </div>
             </div>
           </div>
-          <div class="car-details__pagination-wrapper">
+          <div
+            class="car-details__pagination-wrapper car-details__pagination-wrapper--desktop"
+          >
             <div class="car-details__pagination-current">
               <div class="swiper-pagination"></div>
             </div>
             <div class="slider-swiper-pagination car-details__pagination">
-              <div class="swiper-button-prev-details slider-button-prev">
+              <div
+                class="swiper-button-prev-details slider-button-prev swiper-button-prev-details--for-desktop"
+              >
                 <img alt="prev" src="./assets/svg/prev.svg" />
               </div>
-              <div class="swiper-button-next-details slider-button-next">
+              <div
+                class="swiper-button-next-details slider-button-next swiper-button-next-details--for-desktop"
+              >
                 <img alt="next" src="./assets/svg/next.svg" />
               </div>
             </div>
