@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/selector.css" />
+    <link rel="stylesheet" href="css/catalogPage.css" />
+    <link rel="stylesheet" href="css/carListCard.css" />
+    <link rel="stylesheet" href="css/carCard.css" />
     <link rel="stylesheet" href="css/footer.css" />
 
     <title>AUTOMARKET</title>
@@ -178,7 +182,1178 @@
       </div>
     </header>
 
-    <main class="main"></main>
+    <main class="main">
+      <div class="container">
+        <div class="cars__catalog-wrapper">
+          <div class="cars__catalog-header">
+            <h2>Каталог наших Автомобілів</h2>
+            <div class="cars__catalog-header__filters">
+              <div class="cars__catalog-filters__item" id="listViewButton">
+                <svg
+                  width="19"
+                  height="10"
+                  viewBox="0 0 19 10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.5 6H2.5V4H0.5V6ZM0.5 10H2.5V8H0.5V10ZM0.5 2H2.5V0H0.5V2ZM4.5 6H18.5V4H4.5V6ZM4.5 10H18.5V8H4.5V10ZM4.5 0V2H18.5V0H4.5Z"
+                  />
+                </svg>
+              </div>
+
+              <div class="cars__catalog-filters__item" id="gridViewButton">
+                <svg
+                  width="19"
+                  height="18"
+                  viewBox="0 0 19 18"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="grid-icon"
+                >
+                  <rect x="0.5" width="8" height="8" />
+                  <rect x="10.5" width="8" height="8" />
+                  <rect x="0.5" y="10" width="8" height="8" />
+                  <rect x="10.5" y="10" width="8" height="8" />
+                </svg>
+              </div>
+              <div class="selector custom-selector-for-sort" id="sortFilter">
+                <div class="selector__button">
+                  <input
+                    type="text"
+                    placeholder="Сортування"
+                    class="selector__input"
+                    id="modelInput"
+                    readonly
+                  />
+                  <img
+                    src="./assets/svg/arrowDown.svg"
+                    alt="Arrow"
+                    class="selector__arrow"
+                  />
+                </div>
+                <div class="selector__dropdown">
+                  <ul class="selector__list">
+                    <li class="selector__item" data-value="desc">
+                      Від дорогих до дешевих
+                    </li>
+                    <li class="selector__item" data-value="asc">
+                      Від дешевих до дорогих
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cars__catalog-list-wrapper">
+            <div class="cars__catalog-left-panel">
+              <div class="cars__catalog-left-panel__title">Фільтри</div>
+
+              <div class="filter-group__block filter-group__block--status">
+                <label
+                  class="filter-checkbox__container filter-checkbox__container--bold"
+                >
+                  <input class="filter-checkbox__input" type="checkbox" id="allCars" data-value="all" />
+                  Всі авто
+                </label>
+                <div class="filter-group__block-row">
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="inStock"
+                      data-value="in_stock"
+                    />
+                    В наявності
+                  </label>
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="inTransit"
+                      data-value="in_transit"
+                    />
+                    В дорозі
+                  </label>
+                </div>
+              </div>
+
+              <div class="selector" id="brandSelector">
+                <label for="brandInput" class="selector__label">МАРКА</label>
+                <div class="selector__button">
+                  <input
+                    type="text"
+                    placeholder="Оберіть"
+                    class="selector__input"
+                    id="brandInput"
+                    readonly
+                  />
+                  <img
+                    src="./assets/svg/arrowDown.svg"
+                    alt="Arrow"
+                    class="selector__arrow"
+                  />
+                </div>
+                <div class="selector__dropdown">
+                  <ul class="selector__list">
+                    <li class="selector__item" data-value="audi">Audi</li>
+                    <li class="selector__item" data-value="bmw">BMW</li>
+                    <li class="selector__item" data-value="chevrolet">
+                      Chevrolet
+                    </li>
+                    <li class="selector__item" data-value="ford">Ford</li>
+                    <li class="selector__item" data-value="honda">Honda</li>
+                    <li class="selector__item" data-value="hyundai">Hyundai</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="selector" id="modelSelector">
+                <label for="modelInput" class="selector__label">МОДЕЛЬ</label>
+                <div class="selector__button">
+                  <input
+                    type="text"
+                    placeholder="Оберіть"
+                    class="selector__input"
+                    id="modelInput"
+                    readonly
+                  />
+                  <img
+                    src="./assets/svg/arrowDown.svg"
+                    alt="Arrow"
+                    class="selector__arrow"
+                  />
+                </div>
+                <div class="selector__dropdown">
+                  <ul class="selector__list">
+                    <li class="selector__item" data-value="80">80</li>
+                    <li class="selector__item" data-value="a3">A3</li>
+                    <li class="selector__item" data-value="a4">A4</li>
+                    <li class="selector__item" data-value="a4-allroad">
+                      A4 Allroad
+                    </li>
+                    <li class="selector__item" data-value="a5">A5</li>
+                    <li class="selector__item" data-value="a6">A6</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="filter-group__container">
+                <label class="filter-label">РІК ВИПУСКУ</label>
+                <div class="filter-group__block">
+                  <div class="selector small-selector" id="yearFromSelector">
+                    <div class="selector__button">
+                      <input
+                        type="text"
+                        placeholder="Від"
+                        class="selector__input"
+                        id="modelInput"
+                        readonly
+                      />
+                      <img
+                        src="./assets/svg/arrowDown.svg"
+                        alt="Arrow"
+                        class="selector__arrow"
+                      />
+                    </div>
+                    <div class="selector__dropdown">
+                      <ul class="selector__list selector__list--years"></ul>
+                    </div>
+                  </div>
+                  <div class="selector small-selector" id="yearToSelector">
+                    <div class="selector__button">
+                      <input
+                        type="text"
+                        placeholder="До"
+                        class="selector__input"
+                        id="modelInput"
+                        readonly
+                      />
+                      <img
+                        src="./assets/svg/arrowDown.svg"
+                        alt="Arrow"
+                        class="selector__arrow"
+                      />
+                    </div>
+                    <div class="selector__dropdown">
+                      <ul class="selector__list selector__list--years"></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-group__container">
+                <label class="filter-label">ЦІНА</label>
+                <div class="filter-group__block">
+                  <div class="selector small-selector" id="priceFromSelector">
+                    <div class="selector__button">
+                      <input
+                        type="text"
+                        placeholder="Від"
+                        class="selector__input"
+                        id="modelInput"
+                        readonly
+                      />
+                      <img
+                        src="./assets/svg/arrowDown.svg"
+                        alt="Arrow"
+                        class="selector__arrow"
+                      />
+                    </div>
+                    <div class="selector__dropdown">
+                      <ul class="selector__list">
+                        <li class="selector__item" data-value="0">0</li>
+                        <li class="selector__item" data-value="80000">
+                          80,000
+                        </li>
+                        <li class="selector__item" data-value="100000">
+                          100,000
+                        </li>
+                        <li class="selector__item" data-value="200000">
+                          200,000
+                        </li>
+                        <li class="selector__item" data-value="300000">
+                          300,000
+                        </li>
+                        <li class="selector__item" data-value="400000">
+                          400,000
+                        </li>
+                        <li class="selector__item" data-value="500000">
+                          500,000
+                        </li>
+                        <li class="selector__item" data-value="600000">
+                          600,000
+                        </li>
+                        <li class="selector__item" data-value="700000">
+                          700,000
+                        </li>
+                        <li class="selector__item" data-value="800000">
+                          800,000
+                        </li>
+                        <li class="selector__item" data-value="999999">
+                          999,999
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="selector small-selector" id="priceToSelector">
+                    <div class="selector__button">
+                      <input
+                        type="text"
+                        placeholder="До"
+                        class="selector__input"
+                        id="modelInput"
+                        readonly
+                      />
+                      <img
+                        src="./assets/svg/arrowDown.svg"
+                        alt="Arrow"
+                        class="selector__arrow"
+                      />
+                    </div>
+                    <div class="selector__dropdown">
+                      <ul class="selector__list">
+                        <li class="selector__item" data-value="80000">
+                          80,000
+                        </li>
+                        <li class="selector__item" data-value="100000">
+                          100,000
+                        </li>
+                        <li class="selector__item" data-value="200000">
+                          200,000
+                        </li>
+                        <li class="selector__item" data-value="300000">
+                          300,000
+                        </li>
+                        <li class="selector__item" data-value="400000">
+                          400,000
+                        </li>
+                        <li class="selector__item" data-value="500000">
+                          500,000
+                        </li>
+                        <li class="selector__item" data-value="600000">
+                          600,000
+                        </li>
+                        <li class="selector__item" data-value="700000">
+                          700,000
+                        </li>
+                        <li class="selector__item" data-value="800000">
+                          800,000
+                        </li>
+                        <li class="selector__item" data-value="999999">
+                          999,999
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-group__container">
+                <label class="filter-label">Пробіг</label>
+                <div class="filter-group__block">
+                  <div class="selector small-selector" id="mileageFromSelector">
+                    <div class="selector__button">
+                      <input
+                        type="text"
+                        placeholder="Від"
+                        class="selector__input"
+                        id="modelInput"
+                        readonly
+                      />
+                      <img
+                        src="./assets/svg/arrowDown.svg"
+                        alt="Arrow"
+                        class="selector__arrow"
+                      />
+                    </div>
+                    <div class="selector__dropdown">
+                      <ul class="selector__list">
+                        <li class="selector__item" data-value="0">0</li>
+                        <li class="selector__item" data-value="10000">
+                          10,000
+                        </li>
+                        <li class="selector__item" data-value="30000">
+                          30,000
+                        </li>
+                        <li class="selector__item" data-value="50000">
+                          50,000
+                        </li>
+                        <li class="selector__item" data-value="80000">
+                          80,000
+                        </li>
+                        <li class="selector__item" data-value="100000">
+                          100,000
+                        </li>
+                        <li class="selector__item" data-value="200000">
+                          200,000
+                        </li>
+                        <li class="selector__item" data-value="300000">
+                          300,000
+                        </li>
+                        <li class="selector__item" data-value="400000">
+                          400,000
+                        </li>
+                        <li class="selector__item" data-value="500000">
+                          500,000
+                        </li>
+                        <li class="selector__item" data-value="600000">
+                          600,000
+                        </li>
+                        <li class="selector__item" data-value="700000">
+                          700,000
+                        </li>
+                        <li class="selector__item" data-value="800000">
+                          800,000
+                        </li>
+                        <li class="selector__item" data-value="999999">
+                          999,999
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="selector small-selector" id="mileageToSelector">
+                    <div class="selector__button">
+                      <input
+                        type="text"
+                        placeholder="До"
+                        class="selector__input"
+                        id="modelInput"
+                        readonly
+                      />
+                      <img
+                        src="./assets/svg/arrowDown.svg"
+                        alt="Arrow"
+                        class="selector__arrow"
+                      />
+                    </div>
+                    <div class="selector__dropdown">
+                      <ul class="selector__list">
+                        <li class="selector__item" data-value="10000">
+                          10,000
+                        </li>
+                        <li class="selector__item" data-value="30000">
+                          30,000
+                        </li>
+                        <li class="selector__item" data-value="50000">
+                          50,000
+                        </li>
+                        <li class="selector__item" data-value="80000">
+                          80,000
+                        </li>
+                        <li class="selector__item" data-value="100000">
+                          100,000
+                        </li>
+                        <li class="selector__item" data-value="200000">
+                          200,000
+                        </li>
+                        <li class="selector__item" data-value="300000">
+                          300,000
+                        </li>
+                        <li class="selector__item" data-value="400000">
+                          400,000
+                        </li>
+                        <li class="selector__item" data-value="500000">
+                          500,000
+                        </li>
+                        <li class="selector__item" data-value="600000">
+                          600,000
+                        </li>
+                        <li class="selector__item" data-value="700000">
+                          700,000
+                        </li>
+                        <li class="selector__item" data-value="800000">
+                          800,000
+                        </li>
+                        <li class="selector__item" data-value="999999">
+                          999,999
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-group__container">
+                <label class="filter-label">КОРОБКА ПЕРЕДАЧ</label>
+                <div class="filter-group__block-column">
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="transmissionManual"
+                      data-value="manual"
+                    />
+                    Ручна/Механіка
+                  </label>
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="transmissionAutomatic"
+                      data-value="automatic"
+                    />
+                    Автомат
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-group__container">
+                <label class="filter-label">ТИП ПАЛИВА</label>
+                <div class="filter-group__block-column">
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="fuelBenzine"
+                      data-value="benzine"
+                    />
+                    Бензин
+                  </label>
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="fuelGas"
+                      data-value="gas"
+                    />
+                    Газ
+                  </label>
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="fuelHybrid"
+                      data-value="hybrid"
+                    />
+                    Гібрид
+                  </label>
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="fuelDiesel"
+                      data-value="diesel"
+                    />
+                    Дизель
+                  </label>
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="fuelElectric"
+                      data-value="electric"
+                    />
+                    Електро
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-group__container">
+                <label class="filter-label">ТИП ПРИВОДУ</label>
+                <div class="filter-group__block-column">
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="driveFront"
+                      data-value="front"
+                    />
+                    Передній
+                  </label>
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="driveRear"
+                      data-value="rear"
+                    />
+                    Задній
+                  </label>
+                  <label class="filter-checkbox__container">
+                    <input
+                      class="filter-checkbox__input"
+                      type="checkbox"
+                      id="driveFull"
+                      data-value="full"
+                    />
+                    Повний
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-group__container">
+                <label class="filter-label">ОБ'ЄМ ДВИГУНА</label>
+                <div class="filter-group__block">
+                  <div
+                    class="selector small-selector"
+                    id="engineVolumeFromSelector"
+                  >
+                    <div class="selector__button">
+                      <input
+                        type="text"
+                        placeholder="Від"
+                        class="selector__input"
+                        id="modelInput"
+                        readonly
+                      />
+                      <img
+                        src="./assets/svg/arrowDown.svg"
+                        alt="Arrow"
+                        class="selector__arrow"
+                      />
+                    </div>
+                    <div class="selector__dropdown">
+                      <ul class="selector__list">
+                        <li class="selector__item" data-value="0.1">0.1</li>
+                        <li class="selector__item" data-value="1.0">1.0</li>
+                        <li class="selector__item" data-value="2.0">2.0</li>
+                        <li class="selector__item" data-value="3.0">3.0</li>
+                        <li class="selector__item" data-value="4.0">4.0</li>
+                        <li class="selector__item" data-value="5.0">5.0</li>
+                        <li class="selector__item" data-value="6.0">6.0</li>
+                        <li class="selector__item" data-value="8.0">8.0</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="selector small-selector"
+                    id="engineVolumeToSelector"
+                  >
+                    <div class="selector__button">
+                      <input
+                        type="text"
+                        placeholder="До"
+                        class="selector__input"
+                        id="modelInput"
+                        readonly
+                      />
+                      <img
+                        src="./assets/svg/arrowDown.svg"
+                        alt="Arrow"
+                        class="selector__arrow"
+                      />
+                    </div>
+                    <div class="selector__dropdown">
+                      <ul class="selector__list">
+                        <li class="selector__item" data-value="1.0">1.0</li>
+                        <li class="selector__item" data-value="2.0">2.0</li>
+                        <li class="selector__item" data-value="3.0">3.0</li>
+                        <li class="selector__item" data-value="4.0">4.0</li>
+                        <li class="selector__item" data-value="5.0">5.0</li>
+                        <li class="selector__item" data-value="6.0">6.0</li>
+                        <li class="selector__item" data-value="8.0">8.0</li>
+                        <li class="selector__item" data-value="10.0">10.0</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="selector" id="sortSelector">
+                <label for="modelInput" class="selector__label"
+                  >СОРТУВАННЯ</label
+                >
+                <div class="selector__button">
+                  <input
+                    type="text"
+                    placeholder="Оберіть"
+                    class="selector__input"
+                    id="modelInput"
+                    readonly
+                  />
+                  <img
+                    src="./assets/svg/arrowDown.svg"
+                    alt="Arrow"
+                    class="selector__arrow"
+                  />
+                </div>
+                <div class="selector__dropdown">
+                  <ul class="selector__list">
+                    <li class="selector__item" data-value="desc">
+                      Від дорогих до дешевих
+                    </li>
+                    <li class="selector__item" data-value="asc">
+                      Від дешевих до дорогих
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="filter__buttons-actions">
+                <button id="applyFilters" class="filter__buttons-apply-filters">
+                  Застосувати
+                </button>
+                <button id="resetFilters" class="filter__buttons-reset-filters">
+                  Скинути
+                </button>
+              </div>
+            </div>
+
+            <div class="cars__catalog-list-container">
+              <div class="cars__catalog-list cars__catalog-list--grid">
+                <div class="card">
+                  <img
+                    src="./assets/images/car-1.png"
+                    alt="Car Image"
+                    class="card__image"
+                  />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail">
+                          <span>285 тис км</span>
+                          <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>2012</span>
+                          <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <a href="./car-details.html" class="card__btn"
+                        >Детальніше</a
+                      >
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="./assets/images/car-1.png"
+                    alt="Car Image"
+                    class="card__image"
+                  />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail">
+                          <span>285 тис км</span>
+                          <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>2012</span>
+                          <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <a href="./car-details.html" class="card__btn"
+                        >Детальніше</a
+                      >
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="./assets/images/car-1.png"
+                    alt="Car Image"
+                    class="card__image"
+                  />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail">
+                          <span>285 тис км</span>
+                          <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>2012</span>
+                          <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <a href="./car-details.html" class="card__btn"
+                        >Детальніше</a
+                      >
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="./assets/images/car-1.png"
+                    alt="Car Image"
+                    class="card__image"
+                  />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail">
+                          <span>285 тис км</span>
+                          <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>2012</span>
+                          <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <a href="./car-details.html" class="card__btn"
+                        >Детальніше</a
+                      >
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="./assets/images/car-1.png"
+                    alt="Car Image"
+                    class="card__image"
+                  />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail">
+                          <span>285 тис км</span>
+                          <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>2012</span>
+                          <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <a href="./car-details.html" class="card__btn"
+                        >Детальніше</a
+                      >
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="./assets/images/car-1.png"
+                    alt="Car Image"
+                    class="card__image"
+                  />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail">
+                          <span>285 тис км</span>
+                          <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>2012</span>
+                          <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <a href="./car-details.html" class="card__btn"
+                        >Детальніше</a
+                      >
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="./assets/images/car-1.png"
+                    alt="Car Image"
+                    class="card__image"
+                  />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail">
+                          <span>285 тис км</span>
+                          <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>2012</span>
+                          <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <a href="./car-details.html" class="card__btn"
+                        >Детальніше</a
+                      >
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="./assets/images/car-1.png"
+                    alt="Car Image"
+                    class="card__image"
+                  />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail">
+                          <span>285 тис км</span>
+                          <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>2012</span>
+                          <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <a href="./car-details.html" class="card__btn"
+                        >Детальніше</a
+                      >
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="./assets/images/car-1.png"
+                    alt="Car Image"
+                    class="card__image"
+                  />
+                  <div class="card__content">
+                    <div class="card__info">
+                      <h3 class="card__title">Audi A6 Allroad</h3>
+                      <p class="card__price">18 999$</p>
+                      <div class="card__details">
+                        <div class="card__detail">
+                          <span>285 тис км</span>
+                          <span class="card__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card__detail-key">Двигун</span>
+                        </div>
+                        <div class="card__detail">
+                          <span>2012</span>
+                          <span class="card__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__buttons">
+                      <a href="./car-details.html" class="card__btn"
+                        >Детальніше</a
+                      >
+                      <button class="card__btn">Консультація</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cars__catalog-list cars__catalog-list--list">
+                <div class="card-list__view">
+                  <img
+                    src="./assets/images/car-2.png"
+                    alt="Car Image"
+                    class="card-list__image"
+                  />
+                  <div class="card-list__content">
+                    <div class="card-list__title-wrapper">
+                      <h3 class="card-list__title">Audi A6 Allroad</h3>
+                      <p class="card-list__price">18 999$</p>
+                    </div>
+                    <div class="card-list__info">
+                      <div class="card-list__details">
+                        <div class="card-list__detail">
+                          <span>285 тис км</span>
+                          <span class="card-list__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card-list__detail-key">Двигун</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>2012</span>
+                          <span class="card-list__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                      <div class="card-list__buttons">
+                        <a href="./car-details.html" class="card-list__btn"
+                          >Детальніше</a
+                        >
+                        <button class="card-list__btn">Консультація</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-list__view">
+                  <img
+                    src="./assets/images/car-3.png"
+                    alt="Car Image"
+                    class="card-list__image"
+                  />
+                  <div class="card-list__content">
+                    <div class="card-list__title-wrapper">
+                      <h3 class="card-list__title">Volkswagen Touareg</h3>
+                      <p class="card-list__price">18 999$</p>
+                    </div>
+                    <div class="card-list__info">
+                      <div class="card-list__details">
+                        <div class="card-list__detail">
+                          <span>285 тис км</span>
+                          <span class="card-list__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card-list__detail-key">Двигун</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>2012</span>
+                          <span class="card-list__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                      <div class="card-list__buttons">
+                        <a href="./car-details.html" class="card-list__btn"
+                          >Детальніше</a
+                        >
+                        <button class="card-list__btn">Консультація</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-list__view">
+                  <img
+                    src="./assets/images/car-4.png"
+                    alt="Car Image"
+                    class="card-list__image"
+                  />
+                  <div class="card-list__content">
+                    <div class="card-list__title-wrapper">
+                      <h3 class="card-list__title">Audi A6 Allroad</h3>
+                      <p class="card-list__price">18 999$</p>
+                    </div>
+                    <div class="card-list__info">
+                      <div class="card-list__details">
+                        <div class="card-list__detail">
+                          <span>285 тис км</span>
+                          <span class="card-list__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card-list__detail-key">Двигун</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>2012</span>
+                          <span class="card-list__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                      <div class="card-list__buttons">
+                        <a href="./car-details.html" class="card-list__btn"
+                          >Детальніше</a
+                        >
+                        <button class="card-list__btn">Консультація</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-list__view">
+                  <img
+                    src="./assets/images/car-2.png"
+                    alt="Car Image"
+                    class="card-list__image"
+                  />
+                  <div class="card-list__content">
+                    <div class="card-list__title-wrapper">
+                      <h3 class="card-list__title">Audi A6 Allroad</h3>
+                      <p class="card-list__price">18 999$</p>
+                    </div>
+                    <div class="card-list__info">
+                      <div class="card-list__details">
+                        <div class="card-list__detail">
+                          <span>285 тис км</span>
+                          <span class="card-list__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card-list__detail-key">Двигун</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>2012</span>
+                          <span class="card-list__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                      <div class="card-list__buttons">
+                        <a href="./car-details.html" class="card-list__btn"
+                          >Детальніше</a
+                        >
+                        <button class="card-list__btn">Консультація</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-list__view">
+                  <img
+                    src="./assets/images/car-3.png"
+                    alt="Car Image"
+                    class="card-list__image"
+                  />
+                  <div class="card-list__content">
+                    <div class="card-list__title-wrapper">
+                      <h3 class="card-list__title">Volkswagen Touareg</h3>
+                      <p class="card-list__price">18 999$</p>
+                    </div>
+                    <div class="card-list__info">
+                      <div class="card-list__details">
+                        <div class="card-list__detail">
+                          <span>285 тис км</span>
+                          <span class="card-list__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card-list__detail-key">Двигун</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>2012</span>
+                          <span class="card-list__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                      <div class="card-list__buttons">
+                        <a href="./car-details.html" class="card-list__btn"
+                          >Детальніше</a
+                        >
+                        <button class="card-list__btn">Консультація</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-list__view">
+                  <img
+                    src="./assets/images/car-4.png"
+                    alt="Car Image"
+                    class="card-list__image"
+                  />
+                  <div class="card-list__content">
+                    <div class="card-list__title-wrapper">
+                      <h3 class="card-list__title">Audi A6 Allroad</h3>
+                      <p class="card-list__price">18 999$</p>
+                    </div>
+                    <div class="card-list__info">
+                      <div class="card-list__details">
+                        <div class="card-list__detail">
+                          <span>285 тис км</span>
+                          <span class="card-list__detail-key">Пробіг</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>Дизель 3.0</span>
+                          <span class="card-list__detail-key">Двигун</span>
+                        </div>
+                        <div class="card-list__detail">
+                          <span>2012</span>
+                          <span class="card-list__detail-key">Рік випуску</span>
+                        </div>
+                      </div>
+                      <div class="card-list__buttons">
+                        <a href="./car-details.html" class="card-list__btn"
+                          >Детальніше</a
+                        >
+                        <button class="card-list__btn">Консультація</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cars__pagination-wrapper">
+                <a
+                  href="#"
+                  class="cars__pagination-link cars__pagination-link--active"
+                  >1</a
+                >
+                <a href="#" class="cars__pagination-link">2</a>
+                <a href="#" class="cars__pagination-link"
+                  ><img
+                    class="cars__pagination-icon"
+                    src="./assets/svg/right-arrow.svg"
+                    alt="arrow-right"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="footer">
       <div class="container">
@@ -289,5 +1464,6 @@
       </div>
     </footer>
     <script src="./js/main.js"></script>
+    <script src="./js/catalogPage.js"></script>
   </body>
 </html>
