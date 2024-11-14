@@ -186,7 +186,16 @@
       <div class="container">
         <div class="cars__catalog-wrapper">
           <div class="cars__catalog-header">
-            <h2>Каталог наших Автомобілів</h2>
+            <h2
+              class="cars__catalog-header__title cars__catalog-header__title--desktop"
+            >
+              Каталог наших Автомобілів
+            </h2>
+            <h2
+              class="cars__catalog-header__title cars__catalog-header__title--mobile"
+            >
+              Каталог наших Автомобілів в наявності
+            </h2>
             <div class="cars__catalog-header__filters">
               <div class="cars__catalog-filters__item" id="listViewButton">
                 <svg
@@ -221,7 +230,6 @@
                     type="text"
                     placeholder="Сортування"
                     class="selector__input"
-                    id="modelInput"
                     readonly
                   />
                   <img
@@ -241,17 +249,40 @@
                   </ul>
                 </div>
               </div>
+              <div class="selector__filter-button--wrapper">
+                <button type="button" class="selector__filter-button">
+                  Фільтр
+                </button>
+                <img
+                  src="./assets/svg/about__decorative-icon.svg"
+                  alt="decorative-icon"
+                />
+              </div>
             </div>
           </div>
           <div class="cars__catalog-list-wrapper">
             <div class="cars__catalog-left-panel">
-              <div class="cars__catalog-left-panel__title">Фільтри</div>
+              <div
+                class="cars__catalog-left-panel__title cars__catalog-left-panel__title--mobile"
+              >
+                фільтр авто
+              </div>
+              <div
+                class="cars__catalog-left-panel__title cars__catalog-left-panel__title--desktop"
+              >
+                Фільтри
+              </div>
 
               <div class="filter-group__block filter-group__block--status">
                 <label
                   class="filter-checkbox__container filter-checkbox__container--bold"
                 >
-                  <input class="filter-checkbox__input" type="checkbox" id="allCars" data-value="all" />
+                  <input
+                    class="filter-checkbox__input"
+                    type="checkbox"
+                    id="allCars"
+                    data-value="all"
+                  />
                   Всі авто
                 </label>
                 <div class="filter-group__block-row">
@@ -343,7 +374,6 @@
                         type="text"
                         placeholder="Від"
                         class="selector__input"
-                        id="modelInput"
                         readonly
                       />
                       <img
@@ -362,7 +392,6 @@
                         type="text"
                         placeholder="До"
                         class="selector__input"
-                        id="modelInput"
                         readonly
                       />
                       <img
@@ -386,7 +415,6 @@
                         type="text"
                         placeholder="Від"
                         class="selector__input"
-                        id="modelInput"
                         readonly
                       />
                       <img
@@ -437,7 +465,6 @@
                         type="text"
                         placeholder="До"
                         class="selector__input"
-                        id="modelInput"
                         readonly
                       />
                       <img
@@ -492,7 +519,6 @@
                         type="text"
                         placeholder="Від"
                         class="selector__input"
-                        id="modelInput"
                         readonly
                       />
                       <img
@@ -552,7 +578,6 @@
                         type="text"
                         placeholder="До"
                         class="selector__input"
-                        id="modelInput"
                         readonly
                       />
                       <img
@@ -728,7 +753,6 @@
                         type="text"
                         placeholder="Від"
                         class="selector__input"
-                        id="modelInput"
                         readonly
                       />
                       <img
@@ -759,7 +783,6 @@
                         type="text"
                         placeholder="До"
                         class="selector__input"
-                        id="modelInput"
                         readonly
                       />
                       <img
@@ -784,7 +807,7 @@
                 </div>
               </div>
               <div class="selector" id="sortSelector">
-                <label for="modelInput" class="selector__label"
+                <label for="sortInput" class="selector__label"
                   >СОРТУВАННЯ</label
                 >
                 <div class="selector__button">
@@ -792,7 +815,7 @@
                     type="text"
                     placeholder="Оберіть"
                     class="selector__input"
-                    id="modelInput"
+                    id="sortInput"
                     readonly
                   />
                   <img
@@ -814,11 +837,11 @@
               </div>
 
               <div class="filter__buttons-actions">
-                <button id="applyFilters" class="filter__buttons-apply-filters">
-                  Застосувати
+                <button id="resetFilters" class="filter__buttons-apply-filters">
+                  Скасувати
                 </button>
-                <button id="resetFilters" class="filter__buttons-reset-filters">
-                  Скинути
+                <button id="applyFilters" class="filter__buttons-reset-filters">
+                  Застосувати
                 </button>
               </div>
             </div>

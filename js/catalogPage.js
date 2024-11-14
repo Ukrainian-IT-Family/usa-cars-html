@@ -61,10 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const input = selector.querySelector(".selector__input");
     const items = Array.from(selector.querySelectorAll(".selector__item"));
 
-    // Set the initial placeholder to "Сортування"
     input.placeholder = sortFilter.placeholder;
 
-    // Toggle dropdown open/close on button click
     button.addEventListener("click", function () {
       selector.classList.toggle("selector--open");
       if (selector.classList.contains("selector--open")) {
@@ -76,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Filter items based on input value
     input.addEventListener("input", function () {
       const filter = input.value.toLowerCase();
       items.forEach((item) => {
@@ -85,35 +82,31 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Set value and display text when an item is clicked
     items.forEach((item) => {
       item.addEventListener("click", function () {
-        sortFilter.value = item.getAttribute("data-value"); // Store unique value
-        sortFilter.displayText = item.textContent.trim(); // Store display text
+        sortFilter.value = item.getAttribute("data-value");
+        sortFilter.displayText = item.textContent.trim();
         input.value = "";
-        input.placeholder = sortFilter.displayText; // Show the selected text
+        input.placeholder = sortFilter.displayText;
         closeDropdown();
       });
     });
 
-    // Close dropdown when clicking outside
     document.addEventListener("click", function (event) {
       if (!selector.contains(event.target)) {
         closeDropdown();
       }
     });
 
-    // Helper function to close dropdown
     function closeDropdown() {
       selector.classList.remove("selector--open");
       input.setAttribute("readonly", true);
       input.value = "";
       input.placeholder = sortFilter.displayText || sortFilter.placeholder;
-      items.forEach((item) => (item.style.display = "block")); // Reset all items
+      items.forEach((item) => (item.style.display = "block"));
     }
   }
 
-  // Initialize the sort filter selector
   initSortFilter();
 });
 
@@ -250,7 +243,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Initialize the selectors
   initSelector("brandSelector", "brand");
   initSelector("modelSelector", "model");
   initSelector("yearFromSelector", "yearFrom");
@@ -268,40 +260,89 @@ document.addEventListener("DOMContentLoaded", function () {
   initCheckboxFilter("driveType");
   initCheckboxFilter("carStatus");
 
- // Apply and reset filter buttons
- const applyButton = document.getElementById("applyFilters");
- if (applyButton) {
-   applyButton.addEventListener("click", function () {
-     const appliedFilters = {};
-     for (const key in filters) {
-       appliedFilters[key] = {
-         value: filters[key].value || filters[key].values || [],
-         displayText: filters[key].displayText || undefined,
-       };
-     }
-     console.log("Filters applied:", appliedFilters);
-   });
- }
+  const filterButton = document.querySelector(".selector__filter-button");
+  const modalPanel = document.querySelector(".cars__catalog-left-panel");
+  const catalogListContainer = document.querySelector(
+    ".cars__catalog-list-container"
+  );
+  const catalogHeader = document.querySelector(".cars__catalog-header");
 
- const resetButton = document.getElementById("resetFilters");
- if (resetButton) {
-   resetButton.addEventListener("click", function () {
-     for (const key in filters) {
-       filters[key].value = "";
-       filters[key].displayText = "";
-       filters[key].values = []; // Reset array filters
-       const selector = document.getElementById(filters[key].selectorId);
-       if (selector) {
-         const input = selector.querySelector(".selector__input");
-         input.placeholder = filters[key].placeholder.trim();
-         input.value = "";
-       }
-     }
-     // Reset all checkboxes individually
-     document.querySelectorAll("input[type='checkbox']").forEach((checkbox) => {
-       checkbox.checked = false;
-     });
-     console.log("Filters reset:", filters);
-   });
- }
+  function isMobileView() {
+    return window.innerWidth <= 768;
+  }
+
+  function initializeModalDisplay() {
+    if (isMobileView()) {
+      modalPanel.style.display = "none";
+    } else {
+      modalPanel.style.display = "";
+    }
+  }
+  initializeModalDisplay();
+
+  filterButton.addEventListener("click", function () {
+    if (isMobileView()) {
+      modalPanel.style.display = "flex";
+      catalogListContainer.style.display = "none";
+      catalogHeader.style.display = "none";
+    }
+  });
+
+  const applyButton = document.getElementById("applyFilters");
+  if (applyButton) {
+    applyButton.addEventListener("click", function () {
+      if (isMobileView()) {
+        modalPanel.style.display = "none";
+        catalogListContainer.style.display = "flex";
+        catalogHeader.style.display = "flex";
+      }
+
+      const appliedFilters = {};
+      for (const key in filters) {
+        appliedFilters[key] = {
+          value: filters[key].value || filters[key].values || [],
+          displayText: filters[key].displayText || undefined,
+        };
+      }
+      console.log("Filters applied:", appliedFilters);
+    });
+  }
+
+  const resetButton = document.getElementById("resetFilters");
+  if (resetButton) {
+    resetButton.addEventListener("click", function () {
+      for (const key in filters) {
+        filters[key].value = "";
+        filters[key].displayText = "";
+        filters[key].values = [];
+        const selector = document.getElementById(filters[key].selectorId);
+        if (selector) {
+          const input = selector.querySelector(".selector__input");
+          input.placeholder = filters[key].placeholder.trim();
+          input.value = "";
+        }
+      }
+
+      document
+        .querySelectorAll("input[type='checkbox']")
+        .forEach((checkbox) => {
+          checkbox.checked = false;
+        });
+      console.log("Filters reset:", filters);
+
+      if (isMobileView()) {
+        modalPanel.style.display = "none";
+        catalogListContainer.style.display = "flex";
+        catalogHeader.style.display = "flex";
+      }
+    });
+  }
+
+  window.addEventListener("resize", function () {
+    if (!isMobileView()) {
+      modalPanel.style.display = "";
+      catalogListContainer.style.display = "";
+      catalogHeader.style.display = "";
+    }
+  });
 });

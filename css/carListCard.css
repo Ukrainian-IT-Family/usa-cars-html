@@ -142,3 +142,65 @@
   background-color: #f0f0f0;
   border-color: #8a8a8a;
 }
+
+@media (max-width: 1230px) {
+  .card-list__title-wrapper {
+    max-width: 175px;
+  }
+
+  .card-list__image {
+    max-width: 175px;
+    margin-right: 15px;
+  }
+
+  .card-list__title {
+    font-size: 17px;
+  }
+
+  .card-list__view {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .card-list__image {
+    max-width: 150px;
+  }
+
+  .card-list__title {
+    font-size: 15px;
+  }
+
+  .card-list__content {
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-list__title-wrapper {
+    flex-direction: row;
+    max-width: 100%;
+  }
+
+  .card-list__info {
+    max-width: 100%;
+  }
+
+  .card-list__view:hover .card-list__details {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .card-list__image {
+    max-width: 130px;
+  }
+
+  .card-list__view:hover .card-list__info {
+    gap: 10px;
+  }
+
+  .card-list__view {
+    padding: 10px;
+  }
+}
