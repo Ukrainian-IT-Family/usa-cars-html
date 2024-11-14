@@ -16,6 +16,13 @@ document.getElementById("closeMenu").addEventListener("click", function () {
   document.body.classList.remove("no-scroll");
 });
 
+document.querySelectorAll(".menu-item").forEach(function (item) {
+  item.addEventListener("click", function () {
+    document.getElementById("menuOverlay").classList.remove("active");
+    document.body.classList.remove("no-scroll");
+  });
+});
+
 let currentSlide = 0;
 const slides = document.querySelectorAll(".promotion-slide");
 const totalSlides = slides.length;

@@ -36,7 +36,7 @@
           </div>
           <div class="header__nav">
             <div class="header__dropdown header__dropdown--services">
-              <button class="header__dropdown-btn">
+              <button class="header__dropdown-btn header__dropdown-btn--active">
                 <span> Наші послуги </span>
                 <svg
                   width="13"
@@ -56,7 +56,9 @@
                   >
                 </li>
                 <li class="header__dropdown-item">
-                  <a href="./automaidanchik.html" class="header__dropdown-link"
+                  <a
+                    href="./automaidanchik.html"
+                    class="header__dropdown-link header__dropdown-link--active"
                     >Автомайданчик</a
                   >
                 </li>
@@ -120,7 +122,7 @@
 
             <a href="./catalog.html" class="catalog__link">Каталог авто</a>
           </div>
-          <button class="header__btn">Залишити заявку</button>
+          <a href="./index.html#contact" class="header__btn">Залишити заявку</a>
         </div>
       </div>
 
@@ -133,20 +135,24 @@
             </div>
           </div>
           <ul class="menu-links">
-            <li class="menu-item"><a href="#" class="menu-link">Про нас</a></li>
             <li class="menu-item">
-              <a href="#" class="menu-link">Наші послуги</a>
+              <a href="./index.html#aboutUs" class="menu-link">Про нас</a>
+            </li>
+            <li class="menu-item">
+              <a href="./index.html#services" class="menu-link">Наші послуги</a>
             </li>
             <li class="menu-item">
               <a href="#" class="menu-link">Доставка авто</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="menu-link">Каталог авто</a>
+              <a href="./catalog.html" class="menu-link">Каталог авто</a>
             </li>
             <li class="menu-item">
               <a href="#" class="menu-link">Контакти</a>
             </li>
-            <li class="menu-item"><a href="#" class="menu-link">Відгуки</a></li>
+            <li class="menu-item">
+              <a href="./index.html#comments" class="menu-link">Відгуки</a>
+            </li>
           </ul>
 
           <div class="menu-social">
@@ -245,14 +251,14 @@
           </div>
         </div>
         <div class="service-actions">
-          <button class="service-actions__go-back">
+          <a href="./index.html" class="service-actions__go-back">
             <img src="./assets/svg/arrow-left.svg" alt="go back icon" />
             повернутися назад
-          </button>
+          </a>
           <div class="button__wrapper">
             <button
               class="button-black"
-              onclick="openModal('nonWorkingHoursOverlay')"
+              data-modal-target="orderServiceOverlay"
             >
               ЗАМОВИТИ ПОСЛУГУ
             </button>
@@ -308,12 +314,32 @@
             <div class="footer__menu-wrapper">
               <h3 class="footer__title">Меню</h3>
               <ul class="footer__menu">
-                <li><a href="#" class="footer__menu-link">Про нас</a></li>
+                <li>
+                  <a href="./index.html#aboutUs" class="footer__menu-link"
+                    >Про нас</a
+                  >
+                </li>
                 <li><a href="#" class="footer__menu-link">Доставка</a></li>
-                <li><a href="#" class="footer__menu-link">Послуги</a></li>
-                <li><a href="#" class="footer__menu-link">Відгуки</a></li>
-                <li><a href="#" class="footer__menu-link">Каталог</a></li>
-                <li><a href="#" class="footer__menu-link">Сервіс</a></li>
+                <li>
+                  <a href="./index.html#services" class="footer__menu-link"
+                    >Послуги</a
+                  >
+                </li>
+                <li>
+                  <a href="./index.html#comments" class="footer__menu-link"
+                    >Відгуки</a
+                  >
+                </li>
+                <li>
+                  <a href="./catalog.html" class="footer__menu-link">Каталог</a>
+                </li>
+                <li>
+                  <a
+                    href="./interior-cleaning-services.html"
+                    class="footer__menu-link"
+                    >Сервіс</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="footer__menu-wrapper footer__social--links">
@@ -392,7 +418,8 @@
       <div class="modal">
         <button
           class="modal__close"
-          onclick="closeModal('orderServiceOverlay')"
+          data-modal-close="orderServiceOverlay"
+          aria-label="Закрити модальне вікно"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -444,61 +471,6 @@
       </div>
     </div>
 
-    <div class="modal-overlay" id="costEstimateOverlay">
-      <div class="modal">
-        <button
-          class="modal__close"
-          onclick="closeModal('costEstimateOverlay')"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-          >
-            <path
-              d="M14.5902 15.56L8.2302 9.19L1.8702 15.56L0.450195 14.14L6.8202 7.78L0.450195 1.42L1.8702 0L8.2302 6.37L14.5902 0.0100002L16.0002 1.42L9.6402 7.78L16.0002 14.14L14.5902 15.56Z"
-              fill="white"
-            />
-          </svg>
-        </button>
-
-        <div class="modal__top-container">
-          <h2 class="modal__title">ОТРИМАЙТЕ ПРОРАХУНОК ВАРТОСТІ АВТО</h2>
-          <p class="modal__description">
-            Залишайте дані і отримайте консультацію нашого експерта з повним
-            прорахунком авто під Ваш бюджет
-          </p>
-        </div>
-
-        <form class="modal__form">
-          <div class="modal__inputs-container">
-            <input
-              type="text"
-              placeholder="Ваше ім’я"
-              class="custom-input"
-              required
-            />
-            <input
-              type="tel"
-              placeholder="Номер телефону"
-              class="custom-input"
-              required
-            />
-          </div>
-
-          <button type="submit" class="modal__submit-button">
-            ОТРИМАТИ КОНСУЛЬТАЦІЮ
-          </button>
-
-          <p class="modal__note">
-            *Наш експерт зв’яжеться з Вами протягом 30-ти хвилин
-          </p>
-        </form>
-      </div>
-    </div>
-
     <div class="modal-overlay" id="thankYouOverlay">
       <div class="modal">
         <div class="modal__content">
@@ -512,8 +484,8 @@
       <div class="modal">
         <button
           class="modal__close"
-          onclick="closeModal('nonWorkingHoursOverlay')"
-          aria-label="Закрыть модалку"
+          data-modal-close="nonWorkingHoursOverlay"
+          aria-label="Закрити модальне вікно"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -531,19 +503,21 @@
 
         <div class="modal__top-container">
           <h2 class="modal__title">НА ЖАЛЬ, ЗАРАЗ У НАС НЕРОБОЧИЙ ЧАС</h2>
-          <p class="modal__description">Ми зателефонуємо Вам завтра о:</p>
+          <p class="modal__description-for-time">
+            Ми зателефонуємо Вам завтра о:
+          </p>
 
           <div class="modal__time-select">
-            <!-- Hour Picker -->
             <div class="modal__time-picker" data-type="hour">
-              <div
-                class="modal__time-picker-toggle"
-                onclick="toggleDropdown(this.parentElement)"
-                aria-haspopup="listbox"
-                aria-expanded="false"
-                tabindex="0"
-              >
-                <span class="modal__time-picker-selected">09</span>
+              <div class="modal__time-picker-display" tabindex="0">
+                <input
+                  type="text"
+                  class="modal__time-picker-input"
+                  readonly
+                  value="09"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                />
                 <svg
                   class="modal__time-picker-icon"
                   width="10"
@@ -559,41 +533,35 @@
                   />
                 </svg>
               </div>
+              <div class="modal__time-picker-divider"></div>
               <div
-                class="modal__time-picker-dropdown"
+                class="modal__time-picker-options"
                 role="listbox"
                 tabindex="-1"
               >
-                <div class="modal__time-picker-divider"></div>
-                <div
-                  class="modal__time-picker-options"
-                  role="option"
-                  aria-label="Часы"
-                >
-                  <div class="modal__time-picker-option" tabindex="0">09</div>
-                  <div class="modal__time-picker-option" tabindex="0">10</div>
-                  <div class="modal__time-picker-option" tabindex="0">11</div>
-                  <div class="modal__time-picker-option" tabindex="0">12</div>
-                  <div class="modal__time-picker-option" tabindex="0">13</div>
-                  <div class="modal__time-picker-option" tabindex="0">14</div>
-                  <div class="modal__time-picker-option" tabindex="0">15</div>
-                  <div class="modal__time-picker-option" tabindex="0">16</div>
-                  <div class="modal__time-picker-option" tabindex="0">17</div>
-                  <div class="modal__time-picker-option" tabindex="0">18</div>
-                </div>
+                <div class="modal__time-picker-option" tabindex="0">09</div>
+                <div class="modal__time-picker-option" tabindex="0">10</div>
+                <div class="modal__time-picker-option" tabindex="0">11</div>
+                <div class="modal__time-picker-option" tabindex="0">12</div>
+                <div class="modal__time-picker-option" tabindex="0">13</div>
+                <div class="modal__time-picker-option" tabindex="0">14</div>
+                <div class="modal__time-picker-option" tabindex="0">15</div>
+                <div class="modal__time-picker-option" tabindex="0">16</div>
+                <div class="modal__time-picker-option" tabindex="0">17</div>
+                <div class="modal__time-picker-option" tabindex="0">18</div>
               </div>
             </div>
 
-            <!-- Minute Picker (Опционально) -->
             <div class="modal__time-picker" data-type="minute">
-              <div
-                class="modal__time-picker-toggle"
-                onclick="toggleDropdown(this.parentElement)"
-                aria-haspopup="listbox"
-                aria-expanded="false"
-                tabindex="0"
-              >
-                <span class="modal__time-picker-selected">00</span>
+              <div class="modal__time-picker-display" tabindex="0">
+                <input
+                  type="text"
+                  class="modal__time-picker-input"
+                  readonly
+                  value="00"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                />
                 <svg
                   class="modal__time-picker-icon"
                   width="10"
@@ -609,24 +577,16 @@
                   />
                 </svg>
               </div>
+              <div class="modal__time-picker-divider"></div>
               <div
-                class="modal__time-picker-dropdown"
+                class="modal__time-picker-options"
                 role="listbox"
                 tabindex="-1"
               >
-                <!-- Разделитель между переключателем и опциями -->
-                <div class="modal__time-picker-divider"></div>
-                <!-- Контейнер для опций -->
-                <div
-                  class="modal__time-picker-options"
-                  role="option"
-                  aria-label="Минуты"
-                >
-                  <div class="modal__time-picker-option" tabindex="0">00</div>
-                  <div class="modal__time-picker-option" tabindex="0">15</div>
-                  <div class="modal__time-picker-option" tabindex="0">30</div>
-                  <div class="modal__time-picker-option" tabindex="0">45</div>
-                </div>
+                <div class="modal__time-picker-option" tabindex="0">00</div>
+                <div class="modal__time-picker-option" tabindex="0">15</div>
+                <div class="modal__time-picker-option" tabindex="0">30</div>
+                <div class="modal__time-picker-option" tabindex="0">45</div>
               </div>
             </div>
           </div>

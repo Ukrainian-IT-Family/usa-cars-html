@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/carListCard.css" />
     <link rel="stylesheet" href="css/carCard.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/modal.css" />
 
     <title>AUTOMARKET</title>
   </head>
@@ -120,9 +121,11 @@
               </ul>
             </div>
 
-            <a href="./catalog.html" class="catalog__link">Каталог авто</a>
+            <a href="./catalog.html" class="catalog__link catalog__link--active"
+              >Каталог авто</a
+            >
           </div>
-          <button class="header__btn">Залишити заявку</button>
+          <a href="./index.html#contact" class="header__btn">Залишити заявку</a>
         </div>
       </div>
 
@@ -135,20 +138,24 @@
             </div>
           </div>
           <ul class="menu-links">
-            <li class="menu-item"><a href="#" class="menu-link">Про нас</a></li>
             <li class="menu-item">
-              <a href="#" class="menu-link">Наші послуги</a>
+              <a href="./index.html#aboutUs" class="menu-link">Про нас</a>
+            </li>
+            <li class="menu-item">
+              <a href="./index.html#services" class="menu-link">Наші послуги</a>
             </li>
             <li class="menu-item">
               <a href="#" class="menu-link">Доставка авто</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="menu-link">Каталог авто</a>
+              <a href="./catalog.html" class="menu-link">Каталог авто</a>
             </li>
             <li class="menu-item">
               <a href="#" class="menu-link">Контакти</a>
             </li>
-            <li class="menu-item"><a href="#" class="menu-link">Відгуки</a></li>
+            <li class="menu-item">
+              <a href="./index.html#comments" class="menu-link">Відгуки</a>
+            </li>
           </ul>
 
           <div class="menu-social">
@@ -877,7 +884,12 @@
                       <a href="./car-details.html" class="card__btn"
                         >Детальніше</a
                       >
-                      <button class="card__btn">Консультація</button>
+                      <button
+                        class="card__btn"
+                        data-modal-target="costEstimateOverlay"
+                      >
+                        Консультація
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -910,7 +922,12 @@
                       <a href="./car-details.html" class="card__btn"
                         >Детальніше</a
                       >
-                      <button class="card__btn">Консультація</button>
+                      <button
+                        class="card__btn"
+                        data-modal-target="costEstimateOverlay"
+                      >
+                        Консультація
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -943,7 +960,12 @@
                       <a href="./car-details.html" class="card__btn"
                         >Детальніше</a
                       >
-                      <button class="card__btn">Консультація</button>
+                      <button
+                        class="card__btn"
+                        data-modal-target="costEstimateOverlay"
+                      >
+                        Консультація
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -976,7 +998,12 @@
                       <a href="./car-details.html" class="card__btn"
                         >Детальніше</a
                       >
-                      <button class="card__btn">Консультація</button>
+                      <button
+                        class="card__btn"
+                        data-modal-target="costEstimateOverlay"
+                      >
+                        Консультація
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1009,7 +1036,12 @@
                       <a href="./car-details.html" class="card__btn"
                         >Детальніше</a
                       >
-                      <button class="card__btn">Консультація</button>
+                      <button
+                        class="card__btn"
+                        data-modal-target="costEstimateOverlay"
+                      >
+                        Консультація
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1042,7 +1074,12 @@
                       <a href="./car-details.html" class="card__btn"
                         >Детальніше</a
                       >
-                      <button class="card__btn">Консультація</button>
+                      <button
+                        class="card__btn"
+                        data-modal-target="costEstimateOverlay"
+                      >
+                        Консультація
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1075,7 +1112,12 @@
                       <a href="./car-details.html" class="card__btn"
                         >Детальніше</a
                       >
-                      <button class="card__btn">Консультація</button>
+                      <button
+                        class="card__btn"
+                        data-modal-target="costEstimateOverlay"
+                      >
+                        Консультація
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1108,7 +1150,12 @@
                       <a href="./car-details.html" class="card__btn"
                         >Детальніше</a
                       >
-                      <button class="card__btn">Консультація</button>
+                      <button
+                        class="card__btn"
+                        data-modal-target="costEstimateOverlay"
+                      >
+                        Консультація
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1141,7 +1188,12 @@
                       <a href="./car-details.html" class="card__btn"
                         >Детальніше</a
                       >
-                      <button class="card__btn">Консультація</button>
+                      <button
+                        class="card__btn"
+                        data-modal-target="costEstimateOverlay"
+                      >
+                        Консультація
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1177,7 +1229,12 @@
                         <a href="./car-details.html" class="card-list__btn"
                           >Детальніше</a
                         >
-                        <button class="card-list__btn">Консультація</button>
+                        <button
+                          class="card-list__btn"
+                          data-modal-target="costEstimateOverlay"
+                        >
+                          Консультація
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1212,7 +1269,12 @@
                         <a href="./car-details.html" class="card-list__btn"
                           >Детальніше</a
                         >
-                        <button class="card-list__btn">Консультація</button>
+                        <button
+                          class="card-list__btn"
+                          data-modal-target="costEstimateOverlay"
+                        >
+                          Консультація
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1247,7 +1309,12 @@
                         <a href="./car-details.html" class="card-list__btn"
                           >Детальніше</a
                         >
-                        <button class="card-list__btn">Консультація</button>
+                        <button
+                          class="card-list__btn"
+                          data-modal-target="costEstimateOverlay"
+                        >
+                          Консультація
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1282,7 +1349,12 @@
                         <a href="./car-details.html" class="card-list__btn"
                           >Детальніше</a
                         >
-                        <button class="card-list__btn">Консультація</button>
+                        <button
+                          class="card-list__btn"
+                          data-modal-target="costEstimateOverlay"
+                        >
+                          Консультація
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1317,7 +1389,12 @@
                         <a href="./car-details.html" class="card-list__btn"
                           >Детальніше</a
                         >
-                        <button class="card-list__btn">Консультація</button>
+                        <button
+                          class="card-list__btn"
+                          data-modal-target="costEstimateOverlay"
+                        >
+                          Консультація
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1352,7 +1429,12 @@
                         <a href="./car-details.html" class="card-list__btn"
                           >Детальніше</a
                         >
-                        <button class="card-list__btn">Консультація</button>
+                        <button
+                          class="card-list__btn"
+                          data-modal-target="costEstimateOverlay"
+                        >
+                          Консультація
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1407,12 +1489,32 @@
             <div class="footer__menu-wrapper">
               <h3 class="footer__title">Меню</h3>
               <ul class="footer__menu">
-                <li><a href="#" class="footer__menu-link">Про нас</a></li>
+                <li>
+                  <a href="./index.html#aboutUs" class="footer__menu-link"
+                    >Про нас</a
+                  >
+                </li>
                 <li><a href="#" class="footer__menu-link">Доставка</a></li>
-                <li><a href="#" class="footer__menu-link">Послуги</a></li>
-                <li><a href="#" class="footer__menu-link">Відгуки</a></li>
-                <li><a href="#" class="footer__menu-link">Каталог</a></li>
-                <li><a href="#" class="footer__menu-link">Сервіс</a></li>
+                <li>
+                  <a href="./index.html#services" class="footer__menu-link"
+                    >Послуги</a
+                  >
+                </li>
+                <li>
+                  <a href="./index.html#comments" class="footer__menu-link"
+                    >Відгуки</a
+                  >
+                </li>
+                <li>
+                  <a href="./catalog.html" class="footer__menu-link">Каталог</a>
+                </li>
+                <li>
+                  <a
+                    href="./interior-cleaning-services.html"
+                    class="footer__menu-link"
+                    >Сервіс</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="footer__menu-wrapper footer__social--links">
@@ -1486,6 +1588,208 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-overlay" id="costEstimateOverlay">
+      <div class="modal">
+        <button
+          class="modal__close"
+          data-modal-close="costEstimateOverlay"
+          aria-label="Закрити модальне вікно"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M14.5902 15.56L8.2302 9.19L1.8702 15.56L0.450195 14.14L6.8202 7.78L0.450195 1.42L1.8702 0L8.2302 6.37L14.5902 0.0100002L16.0002 1.42L9.6402 7.78L16.0002 14.14L14.5902 15.56Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+  
+        <div class="modal__top-container">
+          <h2 class="modal__title">ОТРИМАЙТЕ ПРОРАХУНОК ВАРТОСТІ АВТО</h2>
+          <p class="modal__description">
+            Залишайте дані і отримайте консультацію нашого експерта з повним
+            прорахунком авто під Ваш бюджет
+          </p>
+        </div>
+  
+        <form class="modal__form">
+          <div class="modal__inputs-container">
+            <input
+              type="text"
+              placeholder="Ваше ім’я"
+              class="custom-input"
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Номер телефону"
+              class="custom-input"
+              required
+            />
+          </div>
+  
+          <button type="submit" class="modal__submit-button">
+            ОТРИМАТИ КОНСУЛЬТАЦІЮ
+          </button>
+  
+          <p class="modal__note">
+            *Наш експерт зв’яжеться з Вами протягом 30-ти хвилин
+          </p>
+        </form>
+      </div>
+    </div>
+  
+    <div class="modal-overlay" id="thankYouOverlay">
+      <div class="modal">
+        <div class="modal__content">
+          <h2 class="modal__title">ДЯКУЄМО,<br />ЩО ОБИРАЄТЕ НАС!</h2>
+          <p class="modal__description">Ваш запит надіслано</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal-overlay" id="nonWorkingHoursOverlay">
+      <div class="modal">
+        <button
+          class="modal__close"
+          data-modal-close="nonWorkingHoursOverlay"
+          aria-label="Закрити модальне вікно"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M14.5902 15.56L8.2302 9.19L1.8702 15.56L0.450195 14.14L6.8202 7.78L0.450195 1.42L1.8702 0L8.2302 6.37L14.5902 0.0100002L16.0002 1.42L9.6402 7.78L16.0002 14.14L14.5902 15.56Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+  
+        <div class="modal__top-container">
+          <h2 class="modal__title">НА ЖАЛЬ, ЗАРАЗ У НАС НЕРОБОЧИЙ ЧАС</h2>
+          <p class="modal__description-for-time">
+            Ми зателефонуємо Вам завтра о:
+          </p>
+  
+          <div class="modal__time-select">
+            <div class="modal__time-picker" data-type="hour">
+              <div class="modal__time-picker-display" tabindex="0">
+                <input
+                  type="text"
+                  class="modal__time-picker-input"
+                  readonly
+                  value="09"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                />
+                <svg
+                  class="modal__time-picker-icon"
+                  width="10"
+                  height="18"
+                  viewBox="0 0 10 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 0.9L0.5 7.2H9.5L5 0.9ZM5 17.1L9.5 10.8H0.5L5 17.1Z"
+                    fill="grey"
+                  />
+                </svg>
+              </div>
+              <div class="modal__time-picker-divider"></div>
+              <div
+                class="modal__time-picker-options"
+                role="listbox"
+                tabindex="-1"
+              >
+                <div class="modal__time-picker-option" tabindex="0">09</div>
+                <div class="modal__time-picker-option" tabindex="0">10</div>
+                <div class="modal__time-picker-option" tabindex="0">11</div>
+                <div class="modal__time-picker-option" tabindex="0">12</div>
+                <div class="modal__time-picker-option" tabindex="0">13</div>
+                <div class="modal__time-picker-option" tabindex="0">14</div>
+                <div class="modal__time-picker-option" tabindex="0">15</div>
+                <div class="modal__time-picker-option" tabindex="0">16</div>
+                <div class="modal__time-picker-option" tabindex="0">17</div>
+                <div class="modal__time-picker-option" tabindex="0">18</div>
+              </div>
+            </div>
+  
+            <div class="modal__time-picker" data-type="minute">
+              <div class="modal__time-picker-display" tabindex="0">
+                <input
+                  type="text"
+                  class="modal__time-picker-input"
+                  readonly
+                  value="00"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                />
+                <svg
+                  class="modal__time-picker-icon"
+                  width="10"
+                  height="18"
+                  viewBox="0 0 10 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 0.9L0.5 7.2H9.5L5 0.9ZM5 17.1L9.5 10.8H0.5L5 17.1Z"
+                    fill="grey"
+                  />
+                </svg>
+              </div>
+              <div class="modal__time-picker-divider"></div>
+              <div
+                class="modal__time-picker-options"
+                role="listbox"
+                tabindex="-1"
+              >
+                <div class="modal__time-picker-option" tabindex="0">00</div>
+                <div class="modal__time-picker-option" tabindex="0">15</div>
+                <div class="modal__time-picker-option" tabindex="0">30</div>
+                <div class="modal__time-picker-option" tabindex="0">45</div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <form class="modal__form">
+          <div class="modal__inputs-container">
+            <input
+              type="text"
+              placeholder="Ваше ім’я"
+              class="custom-input"
+              required
+            />
+            <input
+              type="tel"
+              placeholder="Номер телефону"
+              class="custom-input"
+              required
+            />
+          </div>
+  
+          <button type="submit" class="modal__submit-button">
+            ОТРИМАТИ КОНСУЛЬТАЦІЮ
+          </button>
+        </form>
+      </div>
+    </div>
+  
+    <script src="./js/modal.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/catalogPage.js"></script>
   </body>

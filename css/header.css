@@ -46,6 +46,13 @@
   fill: white;
 }
 
+.header__dropdown-btn--active {
+  background-color: #181818;
+  color: white;
+  transition: all 0.3s;
+  fill: white;
+}
+
 .header__dropdown-menu {
   display: none;
   position: absolute;
@@ -79,6 +86,11 @@
   border-bottom: 1px solid transparent;
 }
 
+.header__dropdown-link--active {
+  border-bottom: 1px solid #b7b7b7;
+  cursor: default;
+}
+
 .header__dropdown-item:hover .header__dropdown-link {
   border-bottom: 1px solid #b7b7b7;
 }
@@ -93,6 +105,13 @@
 
   height: 39px;
   width: 160px;
+}
+
+.catalog__link--active {
+  background-color: #181818;
+  color: #ffffff;
+  transition: all 0.3s;
+  cursor: default;
 }
 
 .catalog__link:hover {

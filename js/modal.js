@@ -1,75 +1,134 @@
-function openModal(modalId) {
-  document.getElementById(modalId).classList.add("modal-overlay--active");
-}
-
-function closeModal(modalId) {
-  document.getElementById(modalId).classList.remove("modal-overlay--active");
-}
-
-function handleClickOutside(event) {
-  const modalOverlay = event.currentTarget;
-  const modal = modalOverlay.querySelector(".modal");
-  if (event.target === modalOverlay && !modal.contains(event.target)) {
-    closeModal(modalOverlay.id);
+document.addEventListener("DOMContentLoaded", function () {
+  function openModal(modalId) {
+    document.getElementById(modalId).classList.add("modal-overlay--active");
+    document.body.classList.add("no-scroll");
   }
-}
 
-document.querySelectorAll(".modal-overlay").forEach((overlay) => {
-  overlay.addEventListener("click", handleClickOutside);
-});
+  function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove("modal-overlay--active");
+    document.body.classList.remove("no-scroll");
+  }
 
-function toggleDropdown(picker) {
-  const isOpen = picker.classList.contains("open");
+  document.addEventListener("click", function (event) {
+    const modalTrigger = event.target.closest("[data-modal-target]");
+    if (modalTrigger) {
+      const modalId = modalTrigger.getAttribute("data-modal-target");
+      openModal(modalId);
+    }
 
-  document.querySelectorAll(".modal__time-picker").forEach((p) => {
-    if (p !== picker) {
-      p.classList.remove("open");
+    const modalCloseTrigger = event.target.closest("[data-modal-close]");
+    if (modalCloseTrigger) {
+      const modalId = modalCloseTrigger.getAttribute("data-modal-close");
+      closeModal(modalId);
     }
   });
 
-  if (isOpen) {
-    picker.classList.remove("open");
-  } else {
-    picker.classList.add("open");
-  }
-}
-
-function selectOption(element) {
-  const picker = element.closest(".modal__time-picker");
-  const selectedDisplay = picker.querySelector(".modal__time-picker-selected");
-
-  selectedDisplay.innerText = element.innerText;
-
-  picker.classList.remove("open");
-}
-
-document.addEventListener("click", function (event) {
-  if (!event.target.closest(".modal__time-picker")) {
-    document.querySelectorAll(".modal__time-picker").forEach((picker) => {
-      picker.classList.remove("open");
+  document.querySelectorAll(".modal-overlay").forEach((overlay) => {
+    overlay.addEventListener("click", function (event) {
+      if (event.target === overlay) {
+        overlay.classList.remove("modal-overlay--active");
+        document.body.classList.remove("no-scroll");
+      }
     });
-  }
-});
-
-document.querySelectorAll(".modal__time-picker-option").forEach((option) => {
-  option.addEventListener("click", function (e) {
-    e.stopPropagation();
-    selectOption(this);
   });
 
-  option.addEventListener("keydown", function (e) {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      selectOption(this);
+  function toggleOptions(picker) {
+    const isOpen = picker.classList.contains("open");
+    const input = picker.querySelector(".modal__time-picker-input");
+
+    document.querySelectorAll(".modal__time-picker").forEach((p) => {
+      if (p !== picker) {
+        p.classList.remove("open");
+        p.querySelector(".modal__time-picker-input").setAttribute(
+          "aria-expanded",
+          "false"
+        );
+      }
+    });
+
+    if (isOpen) {
+      picker.classList.remove("open");
+      input.setAttribute("aria-expanded", "false");
+    } else {
+      picker.classList.add("open");
+      input.setAttribute("aria-expanded", "true");
+    }
+  }
+
+  function selectOption(element) {
+    const picker = element.closest(".modal__time-picker");
+    const input = picker.querySelector(".modal__time-picker-input");
+
+    input.value = element.innerText;
+
+    picker.classList.remove("open");
+    input.setAttribute("aria-expanded", "false");
+  }
+
+  document.addEventListener("click", function (event) {
+    if (
+      event.target.classList.contains("modal__time-picker-display") ||
+      event.target.classList.contains("modal__time-picker-input") ||
+      event.target.classList.contains("modal__time-picker-icon")
+    ) {
+      event.stopPropagation();
+      toggleOptions(event.target.closest(".modal__time-picker"));
+    } else if (event.target.classList.contains("modal__time-picker-option")) {
+      event.stopPropagation();
+      selectOption(event.target);
+    } else {
+      document.querySelectorAll(".modal__time-picker").forEach((picker) => {
+        picker.classList.remove("open");
+        picker
+          .querySelector(".modal__time-picker-input")
+          .setAttribute("aria-expanded", "false");
+      });
     }
   });
-});
 
-document.querySelectorAll(".modal__time-picker-toggle").forEach((toggle) => {
-  toggle.addEventListener("keydown", function (e) {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      toggleDropdown(this.parentElement);
+  document.addEventListener("keydown", function (event) {
+    const activeElement = document.activeElement;
+
+    if (
+      activeElement.classList.contains("modal__time-picker-display") ||
+      activeElement.classList.contains("modal__time-picker-input")
+    ) {
+      if (
+        event.key === "Enter" ||
+        event.key === " " ||
+        event.key === "ArrowDown"
+      ) {
+        event.preventDefault();
+        toggleOptions(activeElement.closest(".modal__time-picker"));
+      }
+    } else if (activeElement.classList.contains("modal__time-picker-option")) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        selectOption(activeElement);
+      } else if (event.key === "ArrowDown") {
+        event.preventDefault();
+        const nextOption = activeElement.nextElementSibling;
+        if (nextOption) {
+          nextOption.focus();
+        }
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        const prevOption = activeElement.previousElementSibling;
+        if (prevOption) {
+          prevOption.focus();
+        } else {
+          const picker = activeElement.closest(".modal__time-picker");
+          picker.querySelector(".modal__time-picker-display").focus();
+        }
+      } else if (event.key === "Escape") {
+        event.preventDefault();
+        const picker = activeElement.closest(".modal__time-picker");
+        picker.classList.remove("open");
+        picker
+          .querySelector(".modal__time-picker-input")
+          .setAttribute("aria-expanded", "false");
+        picker.querySelector(".modal__time-picker-display").focus();
+      }
     }
   });
 });
