@@ -161,9 +161,9 @@
   color: #fff;
   cursor: pointer;
   text-align: center;
-  font-size: 31px;
+  font-size: 28px;
   width: 37px;
-  height: 23px;
+  height: 24px;
 }
 
 .modal__time-picker-input:focus {

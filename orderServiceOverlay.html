@@ -18,17 +18,6 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/aboutUs.css" />
-    <link rel="stylesheet" href="css/services.css" />
-    <link rel="stylesheet" href="css/companyOverview.css" />
-    <link rel="stylesheet" href="css/deliveryServices.css" />
-    <link rel="stylesheet" href="css/processSteps.css" />
-    <link rel="stylesheet" href="css/catalogSection.css" />
-    <link rel="stylesheet" href="css/promotion-week.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/comments.css" />
-    <link rel="stylesheet" href="css/carCard.css" />
-    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/modal.css" />
 
     <title>AUTOMARKET</title>
@@ -199,188 +188,58 @@
     </header>
 
     <main class="main">
-      <div class="container">
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-bottom: 100px;
-          "
-        >
-          <a target="_blank" href="./main.html">main.html</a>
-          <a target="_blank" href="./catalog.html">catalog.html</a>
-          <a target="_blank" href="./car-details.html">car-details.html</a>
-          <a target="_blank" href="./delivery-usa.html">delivery-usa.html</a>
-          <a target="_blank" href="./delivery-korea.html"
-            >delivery-korea.html</a
-          >
-          <a target="_blank" href="./delivery-europe.html"
-            >delivery-europe.html</a
-          >
-          <a target="_blank" href="./delivery-china.html"
-            >delivery-china.html</a
-          >
-          <a target="_blank" href="./interior-cleaning-services.html"
-            >interior-cleaning-services.html</a
-          >
-          <a target="_blank" href="./car-painting-services.html"
-            >car-painting-services.html</a
-          >
-          <a target="_blank" href="./tradeIn.html">tradeIn.html</a>
-          <a target="_blank" href="./automaidanchik.html"
-            >automaidanchik.html</a
-          >
-          <a target="_blank" href="./evacuator.html">evacuator.html</a>
-          <a target="_blank" href="./credit.html">credit.html</a>
-          <a target="_blank" href="./not-found.html">not-found.html</a>
-          <a target="_blank" href="./thankYouOverlay.html"
-            >thankYouOverlay.html</a
-          >
-          <a target="_blank" href="./nonWorkingHoursOverlay.html"
-            >nonWorkingHoursOverlay.html</a
-          >
-          <a target="_blank" href="./costEstimateOverlay.html"
-            >costEstimateOverlay.html</a
-          >
-          <a target="_blank" href="./orderServiceOverlay.html"
-            >orderServiceOverlay.html</a
-          >
+      <div class="modal-overlay" style="display: flex">
+        <div class="modal">
+          <button class="modal__close" data-modal-close="orderServiceOverlay">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M14.5902 15.56L8.2302 9.19L1.8702 15.56L0.450195 14.14L6.8202 7.78L0.450195 1.42L1.8702 0L8.2302 6.37L14.5902 0.0100002L16.0002 1.42L9.6402 7.78L16.0002 14.14L14.5902 15.56Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+
+          <div class="modal__top-container">
+            <h2 class="modal__title">ЗАЛИШАЙТЕ НОМЕР ТЕЛЕФОНУ</h2>
+
+            <p class="modal__description">
+              Наш менеджер зв’яжеться з Вами <br />
+              і надасть усю необхідну інформацію
+            </p>
+          </div>
+
+          <form class="modal__form">
+            <div class="modal__inputs-container">
+              <input
+                type="text"
+                placeholder="Ваше ім’я"
+                class="custom-input"
+                required
+              />
+              <input
+                type="tel"
+                placeholder="Номер телефону"
+                class="custom-input"
+                required
+              />
+            </div>
+
+            <button type="submit" class="modal__submit-button">
+              ОТРИМАТИ КОНСУЛЬТАЦІЮ
+            </button>
+
+            <p class="modal__note">
+              *Наш експерт зв’яжеться з Вами протягом 30-ти хвилин
+            </p>
+          </form>
         </div>
       </div>
     </main>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__section footer__section--branding">
-            <img
-              src="assets/svg/white-logo.svg"
-              alt="Automarket Logo"
-              class="footer__logo"
-            />
-            <div class="footer__social-links">
-              <a target="_blank" href="#" class="footer__social-link"
-                ><img src="./assets/svg/instagram.svg" alt="Instagram"
-              /></a>
-              <a target="_blank" href="#" class="footer__social-link"
-                ><img src="./assets/svg/telegram.svg" alt="Telegram"
-              /></a>
-              <a target="_blank" href="#" class="footer__social-link"
-                ><img src="./assets/svg/whatsapp.svg" alt="WhatsApp"
-              /></a>
-              <a target="_blank" href="#" class="footer__social-link"
-                ><img src="./assets/svg/tiktok.svg" alt="TikTok"
-              /></a>
-            </div>
-          </div>
-
-          <div class="footer__section footer__section--menu">
-            <div class="footer__menu-wrapper">
-              <h3 class="footer__title">Меню</h3>
-              <ul class="footer__menu">
-                <li>
-                  <a href="./main.html#aboutUs" class="footer__menu-link"
-                    >Про нас</a
-                  >
-                </li>
-                <li>
-                  <a href="./main.html#delivery" class="footer__menu-link"
-                    >Доставка</a
-                  >
-                </li>
-                <li>
-                  <a href="./main.html#services" class="footer__menu-link"
-                    >Послуги</a
-                  >
-                </li>
-                <li>
-                  <a href="./main.html#comments" class="footer__menu-link"
-                    >Відгуки</a
-                  >
-                </li>
-                <li>
-                  <a href="./catalog.html" class="footer__menu-link">Каталог</a>
-                </li>
-                <li>
-                  <a
-                    href="./interior-cleaning-services.html"
-                    class="footer__menu-link"
-                    >Сервіс</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="footer__menu-wrapper footer__social--links">
-              <h3 class="footer__title">Контакти</h3>
-              <ul class="footer__menu">
-                <li>
-                  <a target="_blank" href="#" class="footer__menu-link"
-                    >Viber</a
-                  >
-                </li>
-                <li>
-                  <a target="_blank" href="#" class="footer__menu-link"
-                    >Telegram</a
-                  >
-                </li>
-                <li>
-                  <a target="_blank" href="#" class="footer__menu-link"
-                    >Instagram</a
-                  >
-                </li>
-                <li>
-                  <a target="_blank" href="#" class="footer__menu-link"
-                    >TikTok</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="footer__section footer__section--contacts">
-            <h3 class="footer__title title-none">Контакти</h3>
-            <address class="footer__address">
-              <p class="footer__address-text">
-                Івано-Франківськ<br />
-                вул Галицька 203/1<br />
-                76008<br />
-              </p>
-              <a href="tel:+380990005335" class="footer__phone"
-                >+38099 000 5335</a
-              >
-            </address>
-          </div>
-
-          <div class="footer__section footer__section--subscribe">
-            <h3 class="footer__title uppercase">Підписатися на розсилку</h3>
-            <p class="footer__description">
-              Залишайте свій номер телефону і отримуйте першими усі наші акційні
-              пропозиції!
-            </p>
-            <form class="footer__form">
-              <input
-                type="number"
-                placeholder="Ваш номер телефону"
-                class="custom-input"
-              />
-              <button type="button" class="footer__submit-button">
-                НАДІСЛАТИ
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <div class="footer__bottom">
-          <div class="footer__bottom-links">
-            <a href="#" class="footer__bottom-link"
-              >Політика конфіденційності</a
-            >
-            <a href="#" class="footer__bottom-link">Договір публічної оферти</a>
-          </div>
-          <span class="footer__copyright">2024</span>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
