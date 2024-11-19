@@ -26,7 +26,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 20px;
+  padding: 20px 10px;
 
   width: 310px;
   height: 395px;
@@ -101,6 +101,10 @@
   color: #676767;
 }
 
+.services__item-text--mobile {
+  display: none;
+}
+
 @media (max-width: 1439px) {
   .custom-swiper-container {
     padding: 0 0 0 20px;
@@ -125,8 +129,16 @@
   }
 
   .services__item {
-    width: 265px;
+    width: 267px;
     height: 390px;
+  }
+
+  .services__item-text--mobile {
+    display: block;
+  }
+
+  .services__item-text--desktop {
+    display: none;
   }
 
   .services__item-title {

@@ -10,6 +10,8 @@
 .company-overview__title {
   max-width: 904px;
   width: 100%;
+
+  text-transform: uppercase;
 }
 
 .company-overview__contact-block {
@@ -27,6 +29,10 @@
   height: auto;
 }
 
+.company-overview__title--mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .company-overview__content {
     flex-direction: column;
@@ -38,5 +44,13 @@
   .company-overview__contact-block {
     max-width: 100%;
     gap: 28px;
+  }
+
+  .company-overview__title--mobile {
+    display: block;
+  }
+
+  .company-overview__title--desktop {
+    display: none;
   }
 }
