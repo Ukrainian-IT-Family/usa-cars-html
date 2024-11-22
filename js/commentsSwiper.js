@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const commentText = link.previousElementSibling;
 
     const isExpanded = commentText.classList.toggle("expanded");
-    link.textContent = isExpanded ? "Приховати коментар" : "Читати більше";
+    link.textContent = isExpanded ? "Приховати" : "Читати більше";
     link.setAttribute("aria-expanded", isExpanded);
   }
 
